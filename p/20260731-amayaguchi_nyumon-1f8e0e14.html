@@ -3,64 +3,249 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="疲れた夜でも失敗しにくい甘口（スパークリング）・今夜すぐ" />
   <title>疲れた夜でも失敗しにくい甘口（スパークリング）・今夜すぐ</title>
+  
+  <link rel="canonical" href="https://sarima-gh.github.io/sakebukuro-landing/p/20260731-amayaguchi_nyumon-1f8e0e14.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="疲れた夜でも失敗しにくい甘口（スパークリング）・今夜すぐ" />
+  <meta property="og:description" content="疲れた夜でも失敗しにくい甘口（スパークリング）・今夜すぐ" />
+  <meta property="og:url" content="https://sarima-gh.github.io/sakebukuro-landing/p/20260731-amayaguchi_nyumon-1f8e0e14.html" />
+  <meta property="og:site_name" content="酒袋" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="疲れた夜でも失敗しにくい甘口（スパークリング）・今夜すぐ" />
+  <meta name="twitter:description" content="疲れた夜でも失敗しにくい甘口（スパークリング）・今夜すぐ" />
+
   <style>
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
+
 :root {
-  --bg: #1a1410;
-  --fg: #f3e8d8;
-  --muted: #c4b09a;
-  --accent: #c45c26;
-  --card: #2a211c;
+  --bg0: #100c0a;
+  --bg1: #1a1210;
+  --fg: #f7efe4;
+  --muted: #c9b7a3;
+  --accent: #783424;
+  --accent-soft: #96442c;
+  --line: rgba(247, 239, 228, 0.14);
+  --glass: rgba(24, 16, 14, 0.72);
 }
+
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: "Hiragino Mincho ProN", "Noto Serif JP", serif;
+  min-height: 100vh;
+  color: var(--fg);
+  font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
   background:
-    radial-gradient(1200px 600px at 20% -10%, #3a2a20 0%, transparent 55%),
-    linear-gradient(180deg, #241b16, var(--bg));
-  color: var(--fg);
-  line-height: 1.7;
+    radial-gradient(900px 520px at 12% -8%, rgba(150, 68, 44, 0.35), transparent 60%),
+    radial-gradient(700px 480px at 95% 12%, rgba(40, 70, 110, 0.28), transparent 55%),
+    radial-gradient(600px 400px at 50% 100%, rgba(120, 52, 36, 0.18), transparent 50%),
+    linear-gradient(165deg, #201612 0%, var(--bg0) 45%, #0c0a0f 100%);
+  line-height: 1.75;
 }
-main { max-width: 720px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
-h1 { font-size: 1.6rem; margin: 0 0 0.5rem; letter-spacing: 0.04em; }
-h2 { font-size: 1.1rem; margin: 2rem 0 0.75rem; color: var(--muted); font-weight: 600; }
-.lead { color: var(--muted); margin-bottom: 1.5rem; }
-.card { margin: 0.75rem 0; }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,180,120,0.35) 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 60%, rgba(160,200,255,0.28) 0 1px, transparent 2px),
+    radial-gradient(circle at 40% 80%, rgba(255,140,90,0.25) 0 1.5px, transparent 3px);
+  background-size: 180px 180px, 220px 220px, 260px 260px;
+  animation: drift 18s linear infinite;
+}
+@keyframes drift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-24px); }
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.shell {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem 1.15rem 4rem;
+}
+.brand {
+  font-family: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+  animation: rise 0.7s ease both;
+}
+.hero {
+  padding: 1.6rem 0 0.4rem;
+  animation: rise 0.8s ease both;
+}
+.hero h1 {
+  font-family: "Shippori Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(1.85rem, 5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.06em;
+  margin: 0 0 0.85rem;
+}
+.hero .lead {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 0 0 1.1rem;
+  max-width: 34em;
+}
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.6rem;
+}
+.badge {
+  border: 1px solid var(--line);
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.panel {
+  margin: 1.4rem 0 0;
+  padding: 1.25rem 1.1rem 1.35rem;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(42, 28, 24, 0.72), rgba(18, 12, 10, 0.82));
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  animation: rise 0.9s ease both;
+}
+.panel h2 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.35rem;
+  font-weight: 600;
+}
+.panel .sub {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.offer { margin: 0.85rem 0; }
 .btn {
-  display: block;
-  background: var(--card);
-  color: var(--fg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
   text-decoration: none;
-  padding: 0.95rem 1rem;
-  border-left: 3px solid var(--accent);
+  color: #fff;
+  padding: 1.05rem 1.1rem;
+  border-radius: 14px;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
 }
-.btn.disabled { opacity: 0.55; }
-.note { margin: 0.35rem 0 0; color: var(--muted); font-size: 0.9rem; }
-.footer { margin-top: 3rem; font-size: 0.8rem; color: var(--muted); }
-.nav a { color: var(--accent); }
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-soft), var(--accent));
+  box-shadow: 0 10px 28px rgba(120, 52, 36, 0.35);
+}
+.btn-secondary {
+  background: rgba(247, 239, 228, 0.08);
+  border: 1px solid var(--line);
+  color: var(--fg);
+}
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+}
+.btn.disabled { opacity: 0.55; pointer-events: none; }
+.btn-label {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-size: 1rem;
+}
+.btn-arrow {
+  opacity: 0.85;
+  font-size: 1.1rem;
+}
+.note {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  padding-left: 0.15rem;
+}
+.criteria {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.4rem;
+}
+.criteria li {
+  list-style: none;
+  padding: 0.75rem 0.85rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(255,255,255,0.03);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.nav {
+  margin: 0 0 1rem;
+  font-size: 0.88rem;
+}
+.nav a {
+  color: var(--accent-soft);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(150, 68, 44, 0.45);
+}
+.footer {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.78rem;
+  color: var(--muted);
+  animation: rise 1s ease both;
+}
+.footer p { margin: 0.35rem 0; }
+.empty {
+  color: var(--muted);
+  font-size: 0.92rem;
+  padding: 0.5rem 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before { animation: none !important; transition: none !important; }
+}
 </style>
 </head>
 <body>
-<main>
+<div class="shell">
 
-  <p class="nav"><a href="../index.html">トップ</a> / <a href="../best.html">失敗しない選び方</a></p>
-  <h1>疲れた夜でも失敗しにくい甘口（スパークリング）・今夜すぐ</h1>
-  <p class="lead">この投稿で紹介したお酒（今夜すぐ買う）</p>
-  <h2>今夜すぐ買う</h2>
-  <div class="card"><div class="btn disabled">梵 特選（リンク準備中）</div><p class="note">福井 / フルーティー、甘口 / 2000-4000</p></div>
-<div class="card"><div class="btn disabled">獺祭 純米大吟醸45（リンク準備中）</div><p class="note">山口 / フルーティー、甘口 / 2000-4000</p></div>
-<div class="card"><div class="btn disabled">一ノ蔵 ひめぜん（リンク準備中）</div><p class="note">宮城 / 甘口、軽やか / 0-2000</p></div>
-  <h2>選ぶのが面倒な人向け</h2>
-  <div class="card"><div class="btn disabled">選ぶのが面倒な人向け日本酒サブスク（リンク準備中）</div><p class="note">プロが選んだ日本酒が届く。失敗したくない家飲み向け。</p></div>
-<div class="card"><div class="btn disabled">エンタメで楽しむ酒ガチャ（リンク準備中）</div><p class="note">ランダム配送の楽しさ重視。ギフトや盛り上げたい夜向け。</p></div>
+  <p class="brand">SAKEBUKURO</p>
+  <p class="nav"><a href="../index.html">トップ</a>　/　<a href="../best.html">失敗しない選び方</a></p>
+  <section class="hero">
+    <h1>疲れた夜でも失敗しにくい甘口（スパークリング）・今夜すぐ</h1>
+    <p class="lead">この投稿で紹介した一本です。まずは今夜すぐ買えるものから。</p>
+  </section>
+  <section class="panel">
+    <h2>今夜すぐ買う</h2>
+    <p class="sub">投稿と同じラインアップ</p>
+    <div class="offer"><div class="btn btn-primary disabled"><span class="btn-label">梵 特選（準備中）</span></div><p class="note">福井 / フルーティー、甘口 / 2000-4000</p></div>
+<div class="offer"><div class="btn btn-primary disabled"><span class="btn-label">獺祭 純米大吟醸45（準備中）</span></div><p class="note">山口 / フルーティー、甘口 / 2000-4000</p></div>
+<div class="offer"><div class="btn btn-primary disabled"><span class="btn-label">一ノ蔵 ひめぜん（準備中）</span></div><p class="note">宮城 / 甘口、軽やか / 0-2000</p></div>
+  </section>
+  <section class="panel">
+    <h2>選ぶのが面倒な人向け</h2>
+    <p class="sub">常設のおすすめ</p>
+    <div class="offer"><div class="btn btn-primary disabled"><span class="btn-label">選ぶのが面倒な人向け日本酒サブスク（準備中）</span></div><p class="note">プロが選んだ日本酒が届く。失敗したくない家飲み向け。</p></div>
+<div class="offer"><div class="btn btn-primary disabled"><span class="btn-label">エンタメで楽しむ酒ガチャ（準備中）</span></div><p class="note">ランダム配送の楽しさ重視。ギフトや盛り上げたい夜向け。</p></div>
+  </section>
   
 
 <footer class="footer">
-  <p>運営: 酒袋（さけぶくろ）@sakebukuro_official / SSI認定日本酒ナビゲーター</p>
+  <p>運営: 酒袋（さけぶくろ） / SSI認定の日本酒ナビゲーター</p>
   <p>アフィリエイト広告を含みます。お酒は20歳になってから。</p>
   <p>在庫・価格は変動します。リンク先の表示を優先してください。</p>
 </footer>
-</main>
+</div>
 </body>
 </html>
