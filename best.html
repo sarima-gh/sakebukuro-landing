@@ -11,21 +11,29 @@
   <meta property="og:title" content="失敗しない家飲みの選び方" />
   <meta property="og:description" content="迷ったときの常設ガイド。失敗しにくい家飲み日本酒の選び方。" />
   <meta property="og:url" content="https://sarima-gh.github.io/sakebukuro-landing/best.html" />
-  <meta property="og:site_name" content="酒袋（さけぶくろ）" />
+  <meta property="og:site_name" content="酒袋の日本酒ナビ" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="失敗しない家飲みの選び方" />
   <meta name="twitter:description" content="迷ったときの常設ガイド。失敗しにくい家飲み日本酒の選び方。" />
 
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=IBM+Plex+Sans+JP:wght@400;500;600&display=swap');
 
 :root {
-  --fg: #f7efe4;
-  --muted: #d2c2b0;
-  --accent: #783424;
-  --accent-soft: #96442c;
-  --line: rgba(247, 239, 228, 0.16);
-  --glass: rgba(16, 10, 8, 0.66);
+  --bg: #F3F1EC;
+  --paper: #FFFEFB;
+  --ink: #1B263B;
+  --muted: #4A5568;
+  --accent: #C45C26;
+  --accent-press: #A3491C;
+  --memo: #FFF6C8;
+  --line: rgba(27, 38, 59, 0.12);
+  --kunshu: #E8B4A8;
+  --soushu: #7BAE9E;
+  --junshu: #C4A484;
+  --jukushu: #8B5E3C;
+  --sticky-h: 56px;
+  --tap: 44px;
 }
 
 * { box-sizing: border-box; }
@@ -33,258 +41,367 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   min-height: 100vh;
-  color: var(--fg);
-  font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
-  background: #0b0908;
+  color: var(--ink);
+  font-family: "IBM Plex Sans JP", "Hiragino Sans", sans-serif;
+  font-size: 16px;
   line-height: 1.75;
-}
-.bg {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  background-color: #0b0908;
-  background-image:
-    linear-gradient(180deg, rgba(18, 12, 10, 0.42) 0%, rgba(18, 12, 10, 0.62) 38%, rgba(12, 9, 8, 0.86) 100%),
-    radial-gradient(900px 500px at 15% 0%, rgba(150, 68, 44, 0.22), transparent 60%),
-    linear-gradient(120deg, rgba(120, 52, 36, 0.12), transparent 50%),
-    var(--bg-image);
-  background-size: cover;
-  background-position: center;
-  transform: scale(1.04);
-  animation: kenburns 22s ease-in-out infinite alternate;
-}
-.bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
   background:
-    radial-gradient(circle at 18% 28%, rgba(255,170,110,0.16) 0 2px, transparent 3px),
-    radial-gradient(circle at 78% 62%, rgba(140,180,255,0.12) 0 1.5px, transparent 3px);
-  background-size: 220px 220px, 280px 280px;
-  opacity: 0.55;
-  pointer-events: none;
+    radial-gradient(rgba(27,38,59,0.035) 0.7px, transparent 0.7px) 0 0 / 14px 14px,
+    var(--bg);
 }
-@keyframes kenburns {
-  from { transform: scale(1.04) translate3d(0, 0, 0); }
-  to { transform: scale(1.1) translate3d(-1.5%, -1%, 0); }
-}
-@keyframes rise {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
+a { color: var(--ink); }
 .shell {
-  position: relative;
-  z-index: 1;
   max-width: 720px;
   margin: 0 auto;
-  padding: 1.5rem 1.15rem 4rem;
+  padding: 0 1.1rem 5.5rem;
 }
-.account {
-  font-family: "Zen Kaku Gothic New", sans-serif;
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.site-header .brand {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 700;
+  font-size: 1.05rem;
   letter-spacing: 0.04em;
+  text-decoration: none;
+}
+.site-header nav a {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.site-header nav a:hover { border-color: var(--accent); color: var(--ink); }
+.account {
+  margin: 0.9rem 0 0;
   font-size: 0.86rem;
   color: var(--muted);
-  margin: 0 0 1.1rem;
-  animation: rise 0.7s ease both;
 }
-.account strong {
-  color: var(--fg);
-  font-weight: 500;
-}
-.hero {
-  padding: 1.6rem 0 0.4rem;
-  animation: rise 0.8s ease both;
+.hero { padding: 1.4rem 0 0.4rem; animation: rise 0.55s ease both; }
+.threads-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 0.2rem 0.55rem;
+  margin-bottom: 0.75rem;
 }
 .hero h1 {
-  font-family: "Shippori Mincho", "Hiragino Mincho ProN", serif;
-  font-size: clamp(1.85rem, 5vw, 2.5rem);
+  font-family: "Shippori Mincho", serif;
+  font-size: clamp(1.55rem, 5vw, 2.1rem);
   font-weight: 700;
-  line-height: 1.35;
-  letter-spacing: 0.06em;
-  margin: 0 0 0.85rem;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  margin: 0 0 0.75rem;
 }
-.hero .lead {
+.hero .hook {
+  margin: 0;
   color: var(--muted);
   font-size: 1rem;
-  margin: 0 0 1.1rem;
-  max-width: 34em;
 }
-.badge-row {
+.trust {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.6rem;
-}
-.badge {
-  border: 1px solid var(--line);
-  background: var(--glass);
-  backdrop-filter: blur(8px);
-  border-radius: 999px;
-  padding: 0.35rem 0.75rem;
-  font-size: 0.78rem;
+  gap: 0.45rem 0.9rem;
+  margin: 1rem 0 1.25rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.82rem;
   color: var(--muted);
 }
-.panel {
-  margin: 1.4rem 0 0;
-  padding: 1.25rem 1.1rem 1.35rem;
+.criteria {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.05rem;
+  background: var(--paper);
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(42, 28, 24, 0.72), rgba(18, 12, 10, 0.82));
-  backdrop-filter: blur(10px);
-  border-radius: 18px;
-  animation: rise 0.9s ease both;
+}
+.criteria h2 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.05rem;
+  margin: 0 0 0.55rem;
+}
+.criteria ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.criteria li { margin: 0.25rem 0; }
+
+.hero-pick {
+  margin: 0 0 1.5rem;
+  padding: 1.15rem 1.1rem 1.25rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  animation: rise 0.7s ease both;
+}
+.hero-pick .eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin: 0 0 0.35rem;
+}
+.hero-pick h2 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.35rem;
+  margin: 0 0 0.4rem;
+}
+.hero-pick .sub { margin: 0 0 0.85rem; color: var(--muted); font-size: 0.92rem; }
+
+.jump {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.2rem 0 1.1rem;
+  margin-bottom: 0.4rem;
+  -webkit-overflow-scrolling: touch;
+}
+.jump a {
+  flex: 0 0 auto;
+  min-height: var(--tap);
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  text-decoration: none;
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+.jump a:hover, .jump a:focus-visible { border-color: var(--accent); }
+
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 6px 1fr;
+  margin: 0 0 1.15rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  scroll-margin-top: 5.5rem;
+}
+.card.is-highlight { outline: 2px solid var(--accent); outline-offset: 2px; }
+.card-rail { background: var(--ink); opacity: 0.25; }
+.type-kunshu .card-rail { background: var(--kunshu); opacity: 1; }
+.type-soushu .card-rail { background: var(--soushu); opacity: 1; }
+.type-junshu .card-rail { background: var(--junshu); opacity: 1; }
+.type-jukushu .card-rail { background: var(--jukushu); opacity: 1; }
+.card-body { padding: 1rem 1rem 1.15rem; }
+.card-head { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-bottom: 0.35rem; }
+.card-num {
+  font-family: "Shippori Mincho", serif;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.hero-mark {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, white);
+  padding: 0.1rem 0.45rem;
+  transform: rotate(-1.2deg);
+}
+.type-badge, .chip {
+  font-size: 0.72rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 0.1rem 0.45rem;
+}
+.card h3 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.2rem;
+  margin: 0.2rem 0 0.25rem;
+}
+.card-meta { margin: 0 0 0.7rem; color: var(--muted); font-size: 0.86rem; }
+.card-photo {
+  margin: 0 0 0.8rem;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #ebe7df;
+}
+.card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.sweetness {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.4rem 0 0.65rem;
+}
+.sweet-label { font-size: 0.72rem; color: var(--muted); }
+.sweet-cell {
+  width: 1.1rem;
+  height: 0.45rem;
+  background: rgba(27,38,59,0.12);
+}
+.sweet-cell.on { background: var(--accent); }
+.tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.75rem; }
+.tag {
+  font-size: 0.78rem;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  padding: 0.1rem 0;
+}
+
+.memo {
+  background: var(--memo);
+  padding: 0.75rem 0.85rem;
+  margin: 0 0 0.85rem;
+  transform: rotate(-1.2deg);
+  box-shadow: 0 1px 0 rgba(27,38,59,0.06);
+}
+.memo-label {
+  margin: 0 0 0.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--accent-press);
+}
+.memo p { margin: 0; font-size: 0.92rem; }
+.memo-tasting { margin-top: 0.45rem !important; color: var(--muted); }
+.pairing { margin: 0 0 0.55rem; font-size: 0.92rem; color: var(--muted); }
+.pr-near { margin: 0 0 0.55rem; font-size: 0.78rem; color: var(--muted); }
+
+.btn-row { display: grid; gap: 0.5rem; }
+.btn-row.secondary { margin-top: 0.45rem; }
+.btn {
+  min-height: var(--tap);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-press); }
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+.btn.disabled { opacity: 0.45; pointer-events: none; }
+
+.panel {
+  margin: 1.6rem 0;
+  padding: 1.1rem 1.05rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
 }
 .panel h2 {
   font-family: "Shippori Mincho", serif;
-  font-size: 1.05rem;
-  letter-spacing: 0.08em;
-  margin: 0 0 0.35rem;
-  font-weight: 600;
+  font-size: 1.15rem;
+  margin: 0 0 0.45rem;
 }
-.panel .sub {
-  margin: 0 0 1rem;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-.offer { margin: 0.85rem 0; }
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  text-decoration: none;
-  color: #fff;
-  padding: 1.05rem 1.1rem;
-  border-radius: 14px;
-  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
-}
-.btn-primary {
-  background: linear-gradient(135deg, var(--accent-soft), var(--accent));
-  box-shadow: 0 10px 28px rgba(120, 52, 36, 0.35);
-}
-.btn-secondary {
-  background: rgba(247, 239, 228, 0.08);
-  border: 1px solid var(--line);
-  color: var(--fg);
-}
-.btn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.06);
-}
-.btn.disabled { opacity: 0.55; pointer-events: none; }
-.btn-label {
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  font-size: 1rem;
-}
-.btn-arrow {
-  opacity: 0.85;
-  font-size: 1.1rem;
-}
-.note {
-  margin: 0.4rem 0 0;
-  color: var(--muted);
-  font-size: 0.86rem;
-  padding-left: 0.15rem;
-}
-.criteria {
-  display: grid;
-  gap: 0.65rem;
-  margin-top: 0.4rem;
-}
-.criteria li {
-  list-style: none;
-  padding: 0.75rem 0.85rem;
-  border-left: 3px solid var(--accent);
-  background: rgba(255,255,255,0.03);
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-.nav {
-  margin: 0 0 1rem;
-  font-size: 0.88rem;
-}
-.nav a {
-  color: var(--accent-soft);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(150, 68, 44, 0.45);
-}
+.panel .sub { margin: 0 0 0.85rem; color: var(--muted); font-size: 0.9rem; }
+.offer { margin: 0 0 0.85rem; }
+.offer .note { margin: 0.35rem 0 0; font-size: 0.84rem; color: var(--muted); }
+
 .footer {
-  margin-top: 2.5rem;
-  padding-top: 1.25rem;
+  margin-top: 2rem;
+  padding-top: 1.1rem;
   border-top: 1px solid var(--line);
   font-size: 0.78rem;
   color: var(--muted);
-  animation: rise 1s ease both;
 }
-.footer p { margin: 0.35rem 0; }
-.ladder-tag {
-  display: inline-block;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  color: var(--accent-soft);
-  border: 1px solid rgba(150, 68, 44, 0.45);
-  padding: 0.15rem 0.55rem;
-  margin-bottom: 0.55rem;
+.footer p { margin: 0.3rem 0; }
+.footer a { color: inherit; }
+
+.sticky-cta {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 30;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: var(--sticky-h);
+  padding: 0.55rem 1rem calc(0.55rem + env(safe-area-inset-bottom));
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -4px 18px rgba(27,38,59,0.06);
 }
-.pr-inline {
-  font-size: 0.78rem;
+.sticky-cta.is-on { display: flex; }
+.sticky-cta .name {
+  font-size: 0.86rem;
   color: var(--muted);
-  margin: 0.4rem 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 48%;
 }
-.empty {
-  color: var(--muted);
-  font-size: 0.92rem;
-  padding: 0.5rem 0;
+.sticky-cta .btn { flex: 1; max-width: 14rem; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 @media (prefers-reduced-motion: reduce) {
-  *, *::before { animation: none !important; transition: none !important; }
+  *, *::before { animation: none !important; }
 }
-
-:root { --bg-image: url("./assets/bg-sake-set.jpg"); }
-  </style>
+@media (min-width: 900px) {
+  .sticky-cta { display: none !important; }
+}
+</style>
 </head>
 <body>
-<div class="bg" aria-hidden="true"></div>
-<div class="shell">
+<header class="site-header shell" style="max-width:720px;margin:0 auto;padding-left:1.1rem;padding-right:1.1rem;">
+  <a class="brand" href="../index.html" id="brand-home">酒袋の日本酒ナビ</a>
+  <nav><a href="../best.html" id="nav-best">選び方</a></nav>
+</header>
+<div class="shell" id="main">
 
-  <p class="account">アカウント <strong>酒袋（さけぶくろ）</strong></p>
-  <p class="nav"><a href="./index.html">トップへ戻る</a></p>
+  <p class="account">アカウント <strong>酒袋（さけぶくろ）</strong> ｜ @sakebukuro_official</p>
   <section class="hero">
-    <h1>失敗しない<br>家飲みの選び方</h1>
-    <p class="lead">SSI認定の日本酒ナビゲーターが使う、迷ったときの判断軸です。投稿が変わっても、このページは残ります。</p>
-    <div class="badge-row">
-      <span class="badge">SSI認定</span>
-      <span class="badge">家飲み特化</span>
-      <span class="badge">選び方の常設ガイド</span>
-    </div>
+    <span class="threads-label">常設ガイド</span>
+    <h1>失敗しない家飲みの選び方</h1>
+    <p class="hook">投稿が変わっても、このページは残ります。迷ったら定番から。</p>
   </section>
-  <section class="panel">
-    <span class="ladder-tag">常設 · 選ぶのをやめる</span>
-    <h2>まずはここ</h2>
-    <p class="sub">選ぶ負担を減らす定番（投稿が変わっても残る）</p>
-    <p class="pr-inline">アフィリエイト広告を含みます。在庫・価格は変動します。</p>
-    <div class="offer"><a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/ichiba/563ed255.df4aa4f7.563ed256.a21707cf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsyuraku-shop%2F40578%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=best" rel="nofollow sponsored noopener" target="_blank" data-shop="affiliate"><span class="btn-label">失敗しにくい王道・獺祭45</span><span class="btn-arrow" aria-hidden="true">→</span></a><p class="note">山口 / フルーティー、甘口寄り / 2000-4000｜向いている人: 初めての一本・ギフト・味の基準が欲しい人。初めてやギフトでも選びやすい定番。家飲みの基準点。</p></div>
-<div class="offer"><a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/ichiba/563ed5c8.7ebb4c8e.563ed5c9.3ed782e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgekkeikan%2Fsake2015f%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=best" rel="nofollow sponsored noopener" target="_blank" data-shop="affiliate"><span class="btn-label">相手を選ばない日本酒ギフト（飲み比べ5本）</span><span class="btn-arrow" aria-hidden="true">→</span></a><p class="note">京都 / 飲み比べ、ギフト / 2000-4000｜向いている人: 贈答・好みが分からない相手・飲み比べしたい人。甘口・辛口を少しずつ試せる贈答向け。好みが分からない相手にも渡しやすい。</p></div>
-  </section>
-  <section class="panel">
+  <div class="trust">
+    <span>SSI認定の日本酒ナビゲーター</span>
+    <span>広告を含みます</span>
+  </div>
+  <section class="criteria">
     <h2>選定の見方</h2>
-    <ul class="criteria">
-      <li>甘口かどうか（初心者がつまずきにくいか）</li>
-      <li>食事やコンビニおつまみとぶつかりにくいか</li>
-      <li>入手しやすさ（ECで手が届くか）</li>
-      <li>価格帯が家飲みとして現実的か</li>
-    </ul>
+    <ol><li>甘口かどうか（初心者がつまずきにくい味か）</li><li>食事やコンビニおつまみとぶつかりにくいか</li><li>入手しやすさ（ECで手が届くか）</li></ol>
+  </section>
+  <section class="panel">
+    <h2>まずはここ</h2>
+    <p class="sub">選ぶ負担を減らす定番</p>
+    <p class="pr-near">Amazon・楽天等へのリンクには広告を含みます</p>
+    <div class="offer"><a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/ichiba/563ed255.df4aa4f7.563ed256.a21707cf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsyuraku-shop%2F40578%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=best" rel="nofollow sponsored noopener" target="_blank" data-item-id="" data-shop="rakuten">失敗しにくい王道・獺祭45</a><p class=note>初めてやギフトでも選びやすい定番。家飲みの基準点。</p></div>
+<div class="offer"><a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/ichiba/563ed5c8.7ebb4c8e.563ed5c9.3ed782e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgekkeikan%2Fsake2015f%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=best" rel="nofollow sponsored noopener" target="_blank" data-item-id="" data-shop="rakuten">相手を選ばない日本酒ギフト（飲み比べ5本）</a><p class=note>甘口・辛口を少しずつ試せる贈答向け。好みが分からない相手にも渡しやすい。</p></div>
   </section>
 
 <footer class="footer">
-  <p>運営アカウント: 酒袋（さけぶくろ）@sakebukuro_official</p>
+  <p>運営アカウント: 酒袋（さけぶくろ）@sakebukuro_official（アカウント名。商品ブランドではありません）</p>
   <p>SSI認定の日本酒ナビゲーターが選定・発信しています。</p>
   <p>アフィリエイト広告を含みます。お酒は20歳になってから。</p>
   <p>在庫・価格は変動します。リンク先の表示を優先してください。</p>
-  <p>問い合わせ: <a href="mailto:sakebukuro.official@gmail.com" style="color:inherit">sakebukuro.official@gmail.com</a></p>
-  <p>背景写真: Unsplash（日本酒の酒器）</p>
+  <p>問い合わせ: <a href="mailto:sakebukuro.official@gmail.com">sakebukuro.official@gmail.com</a></p>
 </footer>
 </div>
+
+
+<script>
+  (function(){
+    var depth = location.pathname.indexOf('/p/') >= 0 ? '../' : './';
+    var brand = document.getElementById('brand-home');
+    var best = document.getElementById('nav-best');
+    if (brand) brand.href = depth + 'index.html';
+    if (best) best.href = depth + 'best.html';
+  })();
+</script>
 </body>
 </html>
