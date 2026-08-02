@@ -135,7 +135,8 @@ a { color: var(--ink); }
   color: var(--muted);
   font-size: 1rem;
 }
-.concept {
+.concept,
+.feature-intro {
   margin: 0 0 1.35rem;
   padding: 0.15rem 0 1.1rem;
   border-bottom: 1px solid var(--line);
@@ -144,7 +145,10 @@ a { color: var(--ink); }
   animation: lamp-in 1s ease both;
   animation-delay: 0.08s;
 }
-.concept p { margin: 0; }
+.concept p,
+.feature-intro p { margin: 0 0 0.65rem; }
+.concept p:last-child,
+.feature-intro p:last-child { margin-bottom: 0; }
 .trust {
   display: flex;
   flex-wrap: wrap;
@@ -175,45 +179,24 @@ a { color: var(--ink); }
 .criteria li { margin: 0.25rem 0; }
 
 .hero-pick {
-  margin: 0 0 1.5rem;
-  padding: 1.05rem 0 1.25rem;
+  margin: 0 0 1.15rem;
+  padding: 1rem 0 1.15rem;
   border-bottom: 1px solid var(--line);
   animation: lamp-in 0.9s ease both;
 }
-.hero-pick .eyebrow {
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
-  color: var(--accent);
-  margin: 0 0 0.35rem;
+.hero-pick .pick-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 0.1rem 0.45rem;
+  margin: 0 0 0.45rem;
 }
 .hero-pick h2 {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.7rem;
 }
-.hero-pick .sub { margin: 0 0 0.85rem; color: var(--muted); font-size: 0.92rem; }
-
-.jump {
-  display: flex;
-  gap: 0.5rem;
-  overflow-x: auto;
-  padding: 0.2rem 0 1.1rem;
-  margin-bottom: 0.4rem;
-  -webkit-overflow-scrolling: touch;
-}
-.jump a {
-  flex: 0 0 auto;
-  min-height: var(--tap);
-  display: inline-flex;
-  align-items: center;
-  padding: 0.45rem 0.85rem;
-  border: 1px solid var(--line);
-  background: color-mix(in srgb, var(--paper) 80%, transparent);
-  text-decoration: none;
-  font-size: 0.86rem;
-  white-space: nowrap;
-}
-.jump a:hover, .jump a:focus-visible { border-color: var(--accent); }
 
 .card {
   position: relative;
@@ -257,16 +240,13 @@ a { color: var(--ink); }
 .card-meta { margin: 0 0 0.7rem; color: var(--muted); font-size: 0.86rem; }
 .card-photo,
 .hero-photo {
-  margin: 0 0 0.85rem;
+  margin: 0 auto 0.85rem;
   width: 100%;
+  max-width: 220px;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--photo-bg);
   border: 1px solid var(--line);
-}
-.hero-photo {
-  margin: 0.75rem auto 1rem;
-  max-width: 360px;
 }
 .card-photo img,
 .hero-photo img {
@@ -275,14 +255,14 @@ a { color: var(--ink); }
   object-fit: contain;
   object-position: center;
   display: block;
-  padding: 0.85rem;
+  padding: 0.7rem;
   box-sizing: border-box;
   background: var(--photo-bg);
 }
 
 .feature-row {
   display: grid;
-  grid-template-columns: 88px 1fr;
+  grid-template-columns: 80px 1fr;
   gap: 0.85rem;
   align-items: center;
   padding: 0.75rem 0;
@@ -291,20 +271,23 @@ a { color: var(--ink); }
   color: inherit;
 }
 .feature-row:last-child { border-bottom: none; }
-.feature-thumb {
-  width: 88px;
-  height: 88px;
+.feature-thumb,
+.offer-thumb {
+  width: 80px;
+  height: 80px;
   overflow: hidden;
   background: var(--photo-bg);
 }
-.feature-thumb img {
+.feature-thumb img,
+.offer-thumb img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
   background: var(--photo-bg);
 }
-.feature-thumb.is-empty {
+.feature-thumb.is-empty,
+.offer-thumb.is-empty {
   background:
     linear-gradient(145deg, color-mix(in srgb, var(--accent) 18%, var(--photo-bg)), var(--photo-bg));
 }
@@ -319,26 +302,10 @@ a { color: var(--ink); }
 
 .offer-row {
   display: grid;
-  grid-template-columns: 72px 1fr;
+  grid-template-columns: 80px 1fr;
   gap: 0.75rem;
   align-items: start;
   margin: 0.85rem 0;
-}
-.offer-thumb {
-  width: 72px;
-  height: 72px;
-  overflow: hidden;
-  background: var(--photo-bg);
-}
-.offer-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  background: var(--photo-bg);
-}
-.offer-thumb.is-empty {
-  background: linear-gradient(145deg, #eadfcb, var(--photo-bg));
 }
 .offer-body .btn { width: 100%; }
 
@@ -507,7 +474,7 @@ a { color: var(--ink); }
   <section class="panel">
     <h2>シーン別の特集</h2>
     <p class="sub">場面や季節ごとのまとめ</p>
-    <a class="feature-row" href="./p/20260731-amayaguchi_nyumon-a70f2809.html"><div class="feature-thumb"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/meishu-honpo/cabinet/01/38130001_1.jpg?_ex=200x200" alt="風の森" loading="lazy" width="176" height="176" /></div><span><span class="feature-title">疲れた夜の甘口寄り入門</span><span class="feature-note">本命 · 風の森</span></span></a>
+    <a class="feature-row" href="./p/20260731-amayaguchi_nyumon-a70f2809.html"><div class="feature-thumb"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/meishu-honpo/cabinet/01/38130001_1.jpg?_ex=200x200" alt="風の森" loading="lazy" width="160" height="160" /></div><span><span class="feature-title">日本酒初心者におすすめする最初の1本</span><span class="feature-note">本命 · 風の森</span></span></a>
   </section>
   <section class="panel">
     <h2>迷ったらここ</h2>
@@ -520,8 +487,8 @@ a { color: var(--ink); }
   <section class="panel">
     <h2>迷ったときの定番</h2>
     <p class="sub">特集の外でも戻れる一本</p>
-    <div class="offer-row"><div class="offer-thumb"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/ono-sake/cabinet/00958694/07397713/sk-000005.jpg?_ex=200x200" alt="獺祭 純米大吟醸45" loading="lazy" width="144" height="144" /></div><div class="offer-body"><a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/ichiba/563ed255.df4aa4f7.563ed256.a21707cf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsyuraku-shop%2F40578%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=home" rel="nofollow sponsored noopener" target="_blank" data-item-id="" data-shop="rakuten">香り系の基準点・獺祭45</a><p class=note>香り系の定番。初めてでも味の方向がわかりやすい一本。</p></div></div>
-<div class="offer-row"><div class="offer-thumb"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/gekkeikan/cabinet/set/2607_040018_kago.jpg?_ex=200x200" alt="月桂冠 日本酒飲み比べミニボトル5本セット" loading="lazy" width="144" height="144" /></div><div class="offer-body"><a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/ichiba/563ed5c8.7ebb4c8e.563ed5c9.3ed782e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgekkeikan%2Fsake2015f%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=home" rel="nofollow sponsored noopener" target="_blank" data-item-id="" data-shop="rakuten">甘口〜辛口を試す飲み比べ5本</a><p class=note>場面がまだ曖昧なときの飲み比べ。甘口から辛口まで少しずつ試せる。</p></div></div>
+    <div class="offer-row"><div class="offer-thumb"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/ono-sake/cabinet/00958694/07397713/sk-000005.jpg?_ex=200x200" alt="獺祭 純米大吟醸45" loading="lazy" width="160" height="160" /></div><div class="offer-body"><a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/ichiba/563ed255.df4aa4f7.563ed256.a21707cf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsyuraku-shop%2F40578%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=home" rel="nofollow sponsored noopener" target="_blank" data-item-id="" data-shop="rakuten">香り系の基準点・獺祭45</a><p class=note>香り系の定番。初めてでも味の方向がわかりやすい一本。</p></div></div>
+<div class="offer-row"><div class="offer-thumb"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/gekkeikan/cabinet/set/2607_040018_kago.jpg?_ex=200x200" alt="月桂冠 日本酒飲み比べミニボトル5本セット" loading="lazy" width="160" height="160" /></div><div class="offer-body"><a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/ichiba/563ed5c8.7ebb4c8e.563ed5c9.3ed782e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgekkeikan%2Fsake2015f%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=home" rel="nofollow sponsored noopener" target="_blank" data-item-id="" data-shop="rakuten">甘口〜辛口を試す飲み比べ5本</a><p class=note>場面がまだ曖昧なときの飲み比べ。甘口から辛口まで少しずつ試せる。</p></div></div>
   </section>
 
 <footer class="footer">
