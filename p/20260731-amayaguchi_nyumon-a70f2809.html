@@ -84,6 +84,12 @@ a { color: var(--ink); }
   letter-spacing: 0.04em;
   text-decoration: none;
 }
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  justify-content: flex-end;
+}
 .site-header nav a {
   font-size: 0.9rem;
   color: var(--muted);
@@ -91,6 +97,31 @@ a { color: var(--ink); }
   border-bottom: 1px solid transparent;
 }
 .site-header nav a:hover { border-color: var(--accent); color: var(--ink); }
+.site-nav-end {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.1rem;
+  margin: 1.5rem 0 0;
+  padding: 0.85rem 0 0;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+.site-nav-end a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.site-nav-end a:hover { border-color: var(--accent); color: var(--ink); }
+.back-to-index {
+  margin: 1.25rem 0 0.25rem;
+  font-size: 0.95rem;
+}
+.back-to-index a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line));
+}
+.back-to-index a:hover { border-color: var(--accent); }
 .hero {
   position: relative;
   padding: 1.4rem 0 0.35rem;
@@ -296,6 +327,13 @@ a { color: var(--ink); }
 .offer-thumb.is-empty {
   background:
     linear-gradient(145deg, color-mix(in srgb, var(--accent) 18%, var(--photo-bg)), var(--photo-bg));
+}
+.feature-scene {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
 }
 .feature-title {
   display: block;
@@ -511,8 +549,11 @@ a { color: var(--ink); }
 </head>
 <body>
 <header class="site-header shell" style="max-width:720px;margin:0 auto;padding-left:1.1rem;padding-right:1.1rem;">
-  <a class="brand" href="../index.html" id="brand-home">酒袋の日本酒ナビ</a>
-  <nav><a href="../best.html" id="nav-best">迷ったとき</a></nav>
+  <a class="brand" href="https://sarima-gh.github.io/sakebukuro-landing/" id="brand-home">酒袋の日本酒ナビ</a>
+  <nav>
+    <a href="https://sarima-gh.github.io/sakebukuro-landing/" id="nav-index" data-nav="index">特集一覧</a>
+    <a href="https://sarima-gh.github.io/sakebukuro-landing/best.html" id="nav-best" data-nav="best">迷ったとき</a>
+  </nav>
 </header>
 <div class="shell" id="main">
 
@@ -521,6 +562,7 @@ a { color: var(--ink); }
     <h1>日本酒が苦手でも始めやすい、最初の1本</h1>
   </section>
   <section class="feature-intro"><div class="intro-block"><h2>この特集について</h2><p>「日本酒って苦い・辛そう」で止まってる人、多いと思う。</p><p>最近の入り口は、フルーティーさや、すっきりした酸っぱさ、開けたてのシュワっと感みたいな方向に寄っている。この特集では、そのとっつきやすい一本から決めやすくした。</p></div><div class="intro-block"><h2>入り口の考え方</h2><p>最初の一本は、昔ながらのキリッとした辛口より、香りやフルーティーさ寄りの方が止まりにくい。</p><ul><li>香りが華やか：マスカットや白桃っぽさが先に来るもの</li><li>すっきりした酸っぱさ：白ワインっぽい口あたり。チーズやトマト系にも寄せやすい</li><li>開けたてのシュワっと感：冷えで飲むと軽く感じやすい</li><li>最初から熱燗やコク強めへ行くと、苦手意識が残りやすい</li></ul></div><div class="intro-block"><h2>選んでいる基準</h2><p>選ぶときに見ているのは、だいたいこの3つ。</p><ul><li>フルーティーさやすっきりした酸っぱさで、苦い印象を外しやすいか</li><li>開けたてのシュワっと感など、軽い口あたりがあるか</li><li>ECで手が届く入手先があるか</li></ul></div></section>
+  <div id="feature-picks">
   
 <article class="card type-soushu" id="hero-pick" data-item-id="sakenowa_792">
   <div class="card-rail" aria-hidden="true"></div>
@@ -554,7 +596,6 @@ a { color: var(--ink); }
   </div>
 </article>
 
-  
 <article class="card type-junshu" id="item-sakenowa_258" data-item-id="sakenowa_258">
   <div class="card-rail" aria-hidden="true"></div>
   <div class="card-body">
@@ -620,6 +661,8 @@ a { color: var(--ink); }
   </div>
 </article>
 
+  </div>
+  <p class="back-to-index"><a href="https://sarima-gh.github.io/sakebukuro-landing/" data-nav="index">特集一覧へ戻る</a></p>
   <section class="panel">
     <h2>選ぶのが面倒なとき</h2>
     <p class="sub">特集の外でも戻れる定番</p>
@@ -627,6 +670,10 @@ a { color: var(--ink); }
 <div class="offer-row"><div class="offer-thumb"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/gekkeikan/cabinet/set/2607_040018_kago.jpg?_ex=200x200" alt="月桂冠 日本酒飲み比べミニボトル5本セット" loading="lazy" width="160" height="160" /></div><div class="offer-body"><a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/ichiba/563ed5c8.7ebb4c8e.563ed5c9.3ed782e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgekkeikan%2Fsake2015f%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=20260731-amayaguchi_nyumon-a70f2809-evergreen" rel="nofollow sponsored noopener" target="_blank" data-item-id="" data-shop="rakuten">甘口〜辛口を試す飲み比べ5本</a><p class=note>場面がまだ曖昧なときの飲み比べ。甘口から辛口まで少しずつ試せる。</p></div></div>
   </section>
 
+  <nav class="site-nav-end" aria-label="サイト内リンク">
+    <a href="https://sarima-gh.github.io/sakebukuro-landing/" data-nav="index">特集一覧</a>
+    <a href="https://sarima-gh.github.io/sakebukuro-landing/best.html" data-nav="best">迷ったとき</a>
+  </nav>
 <footer class="footer">
   <p>酒袋（さけぶくろ）@sakebukuro_official</p>
   <p>広告を含みます。お酒は20歳になってから。在庫・価格はリンク先の表示を優先。味覚・銘柄データに<a href="https://sakenowa.com" rel="noopener">さけのわデータ</a>を利用。</p>
@@ -643,7 +690,8 @@ a { color: var(--ink); }
   const sticky = document.getElementById('sticky-cta');
   const stickyName = document.getElementById('sticky-name');
   const stickyBtn = document.getElementById('sticky-btn');
-  const cards = Array.from(document.querySelectorAll('.card[data-item-id]'));
+  const root = document.getElementById('feature-picks');
+  const cards = Array.from((root || document).querySelectorAll('.card[data-item-id]'));
   if (!sticky || !stickyBtn || !cards.length) return;
 
   function setActive(card) {
@@ -652,51 +700,69 @@ a { color: var(--ink); }
     const nameEl = card.querySelector('h3');
     const btn = card.querySelector('a.btn-primary[data-shop="rakuten"]');
     stickyName.textContent = nameEl ? nameEl.textContent : '';
-    if (btn && btn.href) {
+    if (btn && btn.getAttribute('href')) {
       stickyBtn.href = btn.href;
       stickyBtn.classList.remove('disabled');
       stickyBtn.setAttribute('data-item-id', id || '');
     }
   }
 
-  const io = new IntersectionObserver((entries) => {
-    const visible = entries
-      .filter(e => e.isIntersecting)
-      .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-    if (visible) setActive(visible.target);
-  }, { rootMargin: '-35% 0px -45% 0px', threshold: [0.2, 0.5, 0.8] });
-  cards.forEach(c => io.observe(c));
+  function nearestCard() {
+    const mid = window.innerHeight * 0.42;
+    let best = null;
+    let bestDist = Infinity;
+    cards.forEach(function (card) {
+      const r = card.getBoundingClientRect();
+      if (r.bottom < 80 || r.top > window.innerHeight - 80) return;
+      const center = (r.top + r.bottom) / 2;
+      const dist = Math.abs(center - mid);
+      if (dist < bestDist) {
+        bestDist = dist;
+        best = card;
+      }
+    });
+    return best;
+  }
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 280) sticky.classList.add('is-on');
+  function onScroll() {
+    if (window.scrollY > 200) sticky.classList.add('is-on');
     else sticky.classList.remove('is-on');
-  }, { passive: true });
+    const card = nearestCard();
+    if (card) setActive(card);
+  }
 
-  document.querySelectorAll('.jump a').forEach(a => {
-    a.addEventListener('click', () => {
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+
+  document.querySelectorAll('.jump a').forEach(function (a) {
+    a.addEventListener('click', function () {
       const id = a.getAttribute('href');
       if (!id || !id.startsWith('#')) return;
       const el = document.querySelector(id);
       if (!el) return;
       el.classList.add('is-highlight');
-      setTimeout(() => el.classList.remove('is-highlight'), 1200);
+      setTimeout(function () { el.classList.remove('is-highlight'); }, 1200);
     });
   });
 
   const params = new URLSearchParams(location.search);
   const item = params.get('item');
   if (item) {
-    const el = document.getElementById('item-' + item);
-    if (el) {
-      setTimeout(() => {
+    const el = document.getElementById('item-' + item) || document.getElementById('hero-pick');
+    if (el && root && root.contains(el)) {
+      setTimeout(function () {
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         el.classList.add('is-highlight');
         setActive(el);
         sticky.classList.add('is-on');
       }, 80);
+    } else {
+      setActive(cards[0]);
+      onScroll();
     }
   } else {
     setActive(cards[0]);
+    onScroll();
   }
 })();
 </script>
@@ -706,10 +772,13 @@ a { color: var(--ink); }
     var root = document.documentElement;
     root.style.setProperty('--bg-scene', "url('" + depth + "assets/bg-sake-bottle.jpg')");
     root.style.setProperty('--hero-scene', "url('" + depth + "assets/bg-sake-set.jpg')");
+    var base = "https://sarima-gh.github.io/sakebukuro-landing";
+    var indexUrl = base ? (base + '/') : (depth + 'index.html');
+    var bestUrl = base ? (base + '/best.html') : (depth + 'best.html');
+    document.querySelectorAll('[data-nav="index"]').forEach(function(a){ a.href = indexUrl; });
+    document.querySelectorAll('[data-nav="best"]').forEach(function(a){ a.href = bestUrl; });
     var brand = document.getElementById('brand-home');
-    var best = document.getElementById('nav-best');
-    if (brand) brand.href = depth + 'index.html';
-    if (best) best.href = depth + 'best.html';
+    if (brand) brand.href = indexUrl;
   })();
 </script>
 </body>
