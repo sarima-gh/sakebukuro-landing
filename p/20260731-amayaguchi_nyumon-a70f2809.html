@@ -364,6 +364,38 @@ a { color: var(--ink); }
   border-bottom: 1px solid var(--line);
   padding: 0.1rem 0;
 }
+.pairing-block { margin: 0 0 0.75rem; }
+.pairing-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.pair-meta {
+  margin: 0 0 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.pair-type,
+.pair-temp {
+  display: inline-block;
+  padding: 0.12rem 0.45rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--accent) 8%, var(--paper));
+}
+.pair-foods { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.pair-food {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--memo) 55%, var(--paper));
+}
 
 .memo {
   background: var(--memo);
@@ -500,6 +532,7 @@ a { color: var(--ink); }
 
 <div class="sweetness" aria-label="甘辛 4/5"><span class="sweet-label">辛口</span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell"></span><span class="sweet-label">甘口</span></div>
 <div class="tags-block"><p class="tags-label">飲んだ人のタグ</p><div class="tags"><span class="tag">ガス</span><span class="tag">酸味</span><span class="tag">フルーティ</span></div></div>
+<div class="pairing-block"><p class="pairing-label">合わせやすい料理</p><p class="pair-meta"><span class="pair-type">爽酒</span></p><div class="pair-foods"><span class="pair-food">コンビニのおつまみ</span></div></div>
 <aside class="memo" aria-label="酒袋メモ"><p class="memo-label">酒袋メモ</p><p>秋津穂の生酒。ガスが立って、冷えで飲むと軽い🙂</p></aside>
 <p class="rakuten-review">楽天上の評価 ★4.71（レビュー51件）</p>
     <div class="btn-row">
@@ -533,6 +566,7 @@ a { color: var(--ink); }
 
 <div class="sweetness" aria-label="甘辛 4/5"><span class="sweet-label">辛口</span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell"></span><span class="sweet-label">甘口</span></div>
 <div class="tags-block"><p class="tags-label">飲んだ人のタグ</p><div class="tags"><span class="tag">甘味</span><span class="tag">フルーティ</span><span class="tag">華やか</span></div></div>
+<div class="pairing-block"><p class="pairing-label">合わせやすい料理</p><p class="pair-meta"><span class="pair-type">醇酒</span></p><div class="pair-foods"><span class="pair-food">刺身</span><span class="pair-food">週末</span></div></div>
 <aside class="memo" aria-label="酒袋メモ"><p class="memo-label">酒袋メモ</p><p>陸羽田の純米。華やかさと甘口がセットで来る一本やね👍</p></aside>
     <div class="btn-row">
       <a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/hgc/g00slbkn.xhnea502.g00slbkn.xhneb9bc/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcourage0115%2F10000471%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fcourage0115%2Fi%2F10000471%2F&amp;rafcid=wsc_i_is_2cad5332-afda-4ae8-9c8e-d4b9c81f6151&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=20260731-amayaguchi_nyumon-a70f2809" rel="nofollow sponsored noopener" target="_blank" data-item-id="hanamura" data-shop="rakuten">楽天で在庫・価格を確認</a>
@@ -565,6 +599,7 @@ a { color: var(--ink); }
 
 <div class="sweetness" aria-label="甘辛 4/5"><span class="sweet-label">辛口</span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell"></span><span class="sweet-label">甘口</span></div>
 <div class="tags-block"><p class="tags-label">飲んだ人のタグ</p><div class="tags"><span class="tag">オレンジ</span><span class="tag">ガス</span><span class="tag">酸味</span></div></div>
+<div class="pairing-block"><p class="pairing-label">合わせやすい料理</p><p class="pair-meta"><span class="pair-type">爽酒</span></p><div class="pair-foods"><span class="pair-food">チーズ</span><span class="pair-food">サラダ</span></div></div>
 <aside class="memo" aria-label="酒袋メモ"><p class="memo-label">酒袋メモ</p><p>サンバースト。冷やして飲むと、ガスと酸味が先に来る。</p></aside>
     <div class="btn-row">
       <a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/hgc/g00qk4sn.xhnea544.g00qk4sn.xhneb852/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fauc-chitashige%2F34110320%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fauc-chitashige%2Fi%2F10011095%2F&amp;rafcid=wsc_i_is_2cad5332-afda-4ae8-9c8e-d4b9c81f6151&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=20260731-amayaguchi_nyumon-a70f2809" rel="nofollow sponsored noopener" target="_blank" data-item-id="koueikiku" data-shop="rakuten">楽天で在庫・価格を確認</a>
