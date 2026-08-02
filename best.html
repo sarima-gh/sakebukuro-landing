@@ -135,12 +135,21 @@ a { color: var(--ink); }
   color: var(--muted);
   font-size: 1rem;
 }
-.concept,
-.feature-intro {
+.concept {
   margin: 0 0 1.35rem;
   padding: 0.15rem 0 1.1rem;
   border-bottom: 1px solid var(--line);
   color: var(--muted);
+  font-size: 0.95rem;
+  animation: lamp-in 1s ease both;
+  animation-delay: 0.08s;
+}
+.feature-intro {
+  margin: 0 0 1.35rem;
+  padding: 1rem 1.05rem;
+  background: color-mix(in srgb, var(--memo) 70%, var(--paper));
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--line));
+  color: var(--ink);
   font-size: 0.95rem;
   animation: lamp-in 1s ease both;
   animation-delay: 0.08s;
@@ -178,24 +187,11 @@ a { color: var(--ink); }
 }
 .criteria li { margin: 0.25rem 0; }
 
-.hero-pick {
-  margin: 0 0 1.15rem;
-  padding: 1rem 0 1.15rem;
-  border-bottom: 1px solid var(--line);
-  animation: lamp-in 0.9s ease both;
-}
-.hero-pick .pick-label {
-  display: inline-block;
+.pick-label {
   font-size: 0.72rem;
   color: var(--muted);
   border: 1px solid var(--line);
   padding: 0.1rem 0.45rem;
-  margin: 0 0 0.45rem;
-}
-.hero-pick h2 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin: 0 0 0.7rem;
 }
 
 .card {

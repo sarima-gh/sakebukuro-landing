@@ -135,12 +135,21 @@ a { color: var(--ink); }
   color: var(--muted);
   font-size: 1rem;
 }
-.concept,
-.feature-intro {
+.concept {
   margin: 0 0 1.35rem;
   padding: 0.15rem 0 1.1rem;
   border-bottom: 1px solid var(--line);
   color: var(--muted);
+  font-size: 0.95rem;
+  animation: lamp-in 1s ease both;
+  animation-delay: 0.08s;
+}
+.feature-intro {
+  margin: 0 0 1.35rem;
+  padding: 1rem 1.05rem;
+  background: color-mix(in srgb, var(--memo) 70%, var(--paper));
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--line));
+  color: var(--ink);
   font-size: 0.95rem;
   animation: lamp-in 1s ease both;
   animation-delay: 0.08s;
@@ -178,24 +187,11 @@ a { color: var(--ink); }
 }
 .criteria li { margin: 0.25rem 0; }
 
-.hero-pick {
-  margin: 0 0 1.15rem;
-  padding: 1rem 0 1.15rem;
-  border-bottom: 1px solid var(--line);
-  animation: lamp-in 0.9s ease both;
-}
-.hero-pick .pick-label {
-  display: inline-block;
+.pick-label {
   font-size: 0.72rem;
   color: var(--muted);
   border: 1px solid var(--line);
   padding: 0.1rem 0.45rem;
-  margin: 0 0 0.45rem;
-}
-.hero-pick h2 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin: 0 0 0.7rem;
 }
 
 .card {
@@ -471,10 +467,17 @@ a { color: var(--ink); }
   </div>
   <section class="feature-intro"><p>日本酒に興味はあるけど、どれから買えばいいか分からない人向けです。</p><p>香りが立ちやすく、甘さやフルーティーさでとっつきやすい方向の銘柄を選びました。ECで手が届く入手先があるものに絞っています。</p></section>
   
-<section class="hero-pick" id="hero-pick">
-  <span class="pick-label">本命</span>
-  <h2>風の森</h2>
-  <div class="card-photo"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/meishu-honpo/cabinet/01/38130001_1.jpg?_ex=400x400" alt="風の森" loading="lazy" width="640" height="480" /></div>
+<article class="card type-soushu" id="hero-pick" data-item-id="sakenowa_792">
+  <div class="card-rail" aria-hidden="true"></div>
+  <div class="card-body">
+    <div class="card-head">
+      <span class="pick-label">本命</span>
+      <span class="type-badge">爽酒</span>
+      <span class="chip">2,000円未満</span>
+    </div>
+    <h3>風の森</h3>
+    <p class="card-meta">奈良 / 油長酒造</p>
+    <div class="card-photo"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/meishu-honpo/cabinet/01/38130001_1.jpg?_ex=400x400" alt="風の森" loading="lazy" width="640" height="480" /></div>
 
 <figure class="radar" aria-label="さけのわフレーバーチャート">
   <svg viewBox="0 0 200 200" width="200" height="200" role="img">
@@ -489,10 +492,11 @@ a { color: var(--ink); }
 <div class="tags-block"><p class="tags-label">飲んだ人のタグ</p><div class="tags"><span class="tag">ガス</span><span class="tag">酸味</span><span class="tag">フルーティ</span></div></div>
 <aside class="memo" aria-label="酒袋メモ"><p class="memo-label">酒袋メモ</p><p>秋津穂657・生酒。ガスと酸味が立つ、軽快な生酒。</p></aside>
 <p class="rakuten-review">楽天上の評価 ★4.71（レビュー51件）</p>
-  <div class="btn-row">
-    <a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/hgc/g00rf3en.xhnea918.g00rf3en.xhneb5b8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmeishu-honpo%2F38130001%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmeishu-honpo%2Fi%2F10004252%2F&amp;rafcid=wsc_i_is_2cad5332-afda-4ae8-9c8e-d4b9c81f6151&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=20260731-amayaguchi_nyumon-a70f2809" rel="nofollow sponsored noopener" target="_blank" data-item-id="sakenowa_792" data-shop="rakuten">楽天で在庫・価格を確認</a>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/hgc/g00rf3en.xhnea918.g00rf3en.xhneb5b8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmeishu-honpo%2F38130001%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmeishu-honpo%2Fi%2F10004252%2F&amp;rafcid=wsc_i_is_2cad5332-afda-4ae8-9c8e-d4b9c81f6151&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=20260731-amayaguchi_nyumon-a70f2809" rel="nofollow sponsored noopener" target="_blank" data-item-id="sakenowa_792" data-shop="rakuten">楽天で在庫・価格を確認</a>
+    </div>
   </div>
-</section>
+</article>
 
   
 <article class="card type-junshu" id="item-hanamura" data-item-id="hanamura">
