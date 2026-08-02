@@ -146,7 +146,7 @@ a { color: var(--ink); }
 }
 .feature-intro {
   margin: 0 0 1.35rem;
-  padding: 1rem 1.05rem;
+  padding: 1.05rem 1.1rem 1.15rem;
   background: color-mix(in srgb, var(--memo) 70%, var(--paper));
   border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--line));
   color: var(--ink);
@@ -154,6 +154,20 @@ a { color: var(--ink); }
   animation: lamp-in 1s ease both;
   animation-delay: 0.08s;
 }
+.feature-intro h2 {
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin: 0 0 0.45rem;
+}
+.feature-intro h2 + p,
+.feature-intro h2 + ul { margin-top: 0; }
+.feature-intro .intro-block + .intro-block { margin-top: 1rem; }
+.feature-intro ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+.feature-intro li { margin: 0.3rem 0; }
 .concept p,
 .feature-intro p { margin: 0 0 0.65rem; }
 .concept p:last-child,
@@ -480,7 +494,7 @@ a { color: var(--ink); }
 
 <footer class="footer">
   <p>酒袋（さけぶくろ）@sakebukuro_official</p>
-  <p>お酒は20歳になってから。在庫・価格はリンク先の表示を優先。味覚・銘柄データに<a href="https://sakenowa.com" rel="noopener">さけのわデータ</a>を利用。</p>
+  <p>広告を含みます。お酒は20歳になってから。在庫・価格はリンク先の表示を優先。味覚・銘柄データに<a href="https://sakenowa.com" rel="noopener">さけのわデータ</a>を利用。</p>
 </footer>
 </div>
 
