@@ -364,6 +364,38 @@ a { color: var(--ink); }
   border-bottom: 1px solid var(--line);
   padding: 0.1rem 0;
 }
+.pairing-block { margin: 0 0 0.75rem; }
+.pairing-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.pair-meta {
+  margin: 0 0 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.pair-type,
+.pair-temp {
+  display: inline-block;
+  padding: 0.12rem 0.45rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--accent) 8%, var(--paper));
+}
+.pair-foods { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.pair-food {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--memo) 55%, var(--paper));
+}
 
 .memo {
   background: var(--memo);
