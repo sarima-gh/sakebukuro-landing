@@ -225,10 +225,6 @@ a { color: var(--ink); }
 .type-jukushu .card-rail { background: var(--jukushu); opacity: 1; }
 .card-body { padding: 1rem 0.85rem 1.15rem 1rem; }
 .card-head { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-bottom: 0.35rem; }
-.card-num {
-  font-size: 0.95rem;
-  color: var(--muted);
-}
 .hero-mark {
   font-size: 0.72rem;
   letter-spacing: 0.06em;
@@ -364,37 +360,18 @@ a { color: var(--ink); }
   border-bottom: 1px solid var(--line);
   padding: 0.1rem 0;
 }
-.pairing-block { margin: 0 0 0.75rem; }
-.pairing-label {
-  margin: 0 0 0.35rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
+.serve-temp-block { margin: 0 0 0.75rem; }
+.serve-temp-label {
+  margin: 0 0 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   color: var(--muted);
 }
-.pair-meta {
-  margin: 0 0 0.4rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-.pair-type,
-.pair-temp {
-  display: inline-block;
-  padding: 0.12rem 0.45rem;
-  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
-  border-radius: 4px;
-  background: color-mix(in srgb, var(--accent) 8%, var(--paper));
-}
-.pair-foods { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-.pair-food {
-  display: inline-block;
-  padding: 0.2rem 0.55rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
+.serve-temp-value {
+  margin: 0;
+  font-size: 0.92rem;
   color: var(--ink);
-  background: color-mix(in srgb, var(--memo) 55%, var(--paper));
 }
 
 .memo {
@@ -411,6 +388,42 @@ a { color: var(--ink); }
 }
 .memo p { margin: 0; font-size: 0.92rem; }
 .memo-tasting { margin-top: 0.45rem !important; color: var(--muted); }
+
+/* 特集専用ヒント（デフォルトのタグ帯・チップとは別デザイン） */
+.feature-hint {
+  margin: -0.25rem 0 0.85rem;
+  padding: 0.65rem 0 0;
+  border-top: 1px dashed var(--line);
+}
+.feature-hint-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent-press);
+}
+.feature-hint-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.2rem;
+}
+.feature-hint-list li {
+  margin: 0;
+  padding: 0 0 0 0.85rem;
+  position: relative;
+  font-size: 0.88rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.feature-hint-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0.15rem;
+  color: var(--accent);
+  font-weight: 700;
+}
 .btn-row { display: grid; gap: 0.5rem; }
 .btn-row.secondary { margin-top: 0.45rem; }
 .btn {
@@ -545,7 +558,6 @@ a { color: var(--ink); }
   <div class="card-rail" aria-hidden="true"></div>
   <div class="card-body">
     <div class="card-head">
-      <span class="card-num">1</span>
       
       <span class="type-badge">醇酒</span>
       <span class="chip">2,000〜4,000円</span>
@@ -578,7 +590,6 @@ a { color: var(--ink); }
   <div class="card-rail" aria-hidden="true"></div>
   <div class="card-body">
     <div class="card-head">
-      <span class="card-num">2</span>
       
       <span class="type-badge">醇酒</span>
       <span class="chip">6,000円台〜</span>
