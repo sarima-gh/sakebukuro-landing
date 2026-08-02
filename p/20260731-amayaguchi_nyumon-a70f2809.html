@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="日本酒に興味はあるけど…な人向け。シーン別の特集と、手が届く入手先がわかる。" />
+  <title>疲れた夜の甘口寄り入門</title>
+  
+  <link rel="canonical" href="https://sarima-gh.github.io/sakebukuro-landing/p/20260731-amayaguchi_nyumon-a70f2809.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="疲れた夜の甘口寄り入門" />
+  <meta property="og:description" content="日本酒に興味はあるけど…な人向け。シーン別の特集と、手が届く入手先がわかる。" />
+  <meta property="og:url" content="https://sarima-gh.github.io/sakebukuro-landing/p/20260731-amayaguchi_nyumon-a70f2809.html" />
+  <meta property="og:site_name" content="酒袋の日本酒ナビ" />
+  
+  <meta property="og:image" content="https://sarima-gh.github.io/sakebukuro-landing/assets/bg-sake-set.jpg" />
+  <meta name="twitter:image" content="https://sarima-gh.github.io/sakebukuro-landing/assets/bg-sake-set.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="疲れた夜の甘口寄り入門" />
+  <meta name="twitter:description" content="日本酒に興味はあるけど…な人向け。シーン別の特集と、手が届く入手先がわかる。" />
+
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=IBM+Plex+Sans+JP:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #F6EFE4;
+  --paper: #FFF8F0;
+  --ink: #2A2430;
+  --muted: #5C534C;
+  --accent: #B07A2E;
+  --accent-press: #8F6224;
+  --memo: #FFF1C4;
+  --line: rgba(42, 36, 48, 0.12);
+  --kunshu: #E8B4A8;
+  --soushu: #7BAE9E;
+  --junshu: #C4A484;
+  --jukushu: #8B5E3C;
+  --sticky-h: 56px;
+  --tap: 44px;
+  --bg-scene: url('./assets/bg-sake-bottle.jpg');
+  --hero-scene: url('./assets/bg-sake-set.jpg');
+  --photo-bg: #F3E8D6;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "IBM Plex Sans JP", "Hiragino Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  background:
+    radial-gradient(ellipse 120% 70% at 50% -10%, rgba(176,122,46,0.16), transparent 55%),
+    linear-gradient(180deg, rgba(246,239,228,0.78) 0%, rgba(246,239,228,0.90) 45%, rgba(246,239,228,0.96) 100%),
+    var(--bg-scene) center top / cover no-repeat scroll,
+    var(--bg);
+}
+a { color: var(--ink); }
+.shell {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.1rem 5.5rem;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.site-header .brand {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+.site-header nav a {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.site-header nav a:hover { border-color: var(--accent); color: var(--ink); }
+.hero {
+  position: relative;
+  padding: 1.4rem 0 0.35rem;
+  animation: lamp-in 0.8s ease both;
+}
+.hero::before {
+  content: "";
+  display: block;
+  height: clamp(7.5rem, 28vw, 11rem);
+  margin: 0 0 1rem;
+  border-radius: 0;
+  background:
+    linear-gradient(180deg, rgba(176,122,46,0.12), rgba(246,239,228,0.82)),
+    var(--hero-scene) center / cover no-repeat;
+  box-shadow: inset 0 -1px 0 var(--line);
+}
+.eyebrow-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+  padding: 0.15rem 0;
+  margin-bottom: 0.7rem;
+}
+.hero h1 {
+  font-family: "IBM Plex Sans JP", "Hiragino Sans", sans-serif;
+  font-size: clamp(1.45rem, 4.8vw, 1.95rem);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.7rem;
+}
+.hero h1.is-brand {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 700;
+  font-size: clamp(1.55rem, 5vw, 2.1rem);
+  letter-spacing: 0.03em;
+}
+.hero .hook {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+.concept {
+  margin: 0 0 1.35rem;
+  padding: 0.15rem 0 1.1rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+  animation: lamp-in 1s ease both;
+  animation-delay: 0.08s;
+}
+.concept p { margin: 0; }
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.9rem;
+  margin: 1rem 0 1.15rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.criteria {
+  margin: 0 0 1.5rem;
+  padding: 0.85rem 0 1.1rem;
+  border-bottom: 1px solid var(--line);
+}
+.criteria h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.55rem;
+}
+.criteria ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.criteria li { margin: 0.25rem 0; }
+
+.hero-pick {
+  margin: 0 0 1.5rem;
+  padding: 1.05rem 0 1.25rem;
+  border-bottom: 1px solid var(--line);
+  animation: lamp-in 0.9s ease both;
+}
+.hero-pick .eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin: 0 0 0.35rem;
+}
+.hero-pick h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+}
+.hero-pick .sub { margin: 0 0 0.85rem; color: var(--muted); font-size: 0.92rem; }
+
+.jump {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.2rem 0 1.1rem;
+  margin-bottom: 0.4rem;
+  -webkit-overflow-scrolling: touch;
+}
+.jump a {
+  flex: 0 0 auto;
+  min-height: var(--tap);
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 80%, transparent);
+  text-decoration: none;
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+.jump a:hover, .jump a:focus-visible { border-color: var(--accent); }
+
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 6px 1fr;
+  margin: 0 0 1.15rem;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 5.5rem;
+}
+.card.is-highlight { outline: 2px solid color-mix(in srgb, var(--accent) 70%, white); outline-offset: 2px; }
+.card-rail { background: var(--ink); opacity: 0.25; }
+.type-kunshu .card-rail { background: var(--kunshu); opacity: 1; }
+.type-soushu .card-rail { background: var(--soushu); opacity: 1; }
+.type-junshu .card-rail { background: var(--junshu); opacity: 1; }
+.type-jukushu .card-rail { background: var(--jukushu); opacity: 1; }
+.card-body { padding: 1rem 0.85rem 1.15rem 1rem; }
+.card-head { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-bottom: 0.35rem; }
+.card-num {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.hero-mark {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, white);
+  padding: 0.1rem 0.45rem;
+}
+.type-badge, .chip {
+  font-size: 0.72rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  padding: 0.1rem 0.45rem;
+}
+.card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0.2rem 0 0.25rem;
+}
+.card-meta { margin: 0 0 0.7rem; color: var(--muted); font-size: 0.86rem; }
+.card-photo,
+.hero-photo {
+  margin: 0 0 0.85rem;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--photo-bg);
+  border: 1px solid var(--line);
+}
+.hero-photo {
+  margin: 0.75rem auto 1rem;
+  max-width: 360px;
+}
+.card-photo img,
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  padding: 0.85rem;
+  box-sizing: border-box;
+  background: var(--photo-bg);
+}
+
+.feature-row {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 0.85rem;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  color: inherit;
+}
+.feature-row:last-child { border-bottom: none; }
+.feature-thumb {
+  width: 88px;
+  height: 88px;
+  overflow: hidden;
+  background: var(--photo-bg);
+}
+.feature-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: var(--photo-bg);
+}
+.feature-thumb.is-empty {
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--accent) 18%, var(--photo-bg)), var(--photo-bg));
+}
+.feature-title {
+  display: block;
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+.feature-note { display: block; font-size: 0.86rem; color: var(--muted); }
+
+.offer-row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  margin: 0.85rem 0;
+}
+.offer-thumb {
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  background: var(--photo-bg);
+}
+.offer-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: var(--photo-bg);
+}
+.offer-thumb.is-empty {
+  background: linear-gradient(145deg, #eadfcb, var(--photo-bg));
+}
+.offer-body .btn { width: 100%; }
+
+.radar {
+  margin: 0.55rem auto 0.75rem;
+  max-width: 220px;
+  text-align: center;
+}
+.radar svg { display: block; margin: 0 auto; width: 200px; height: 200px; }
+.radar-grid { fill: none; stroke: rgba(42,36,48,0.12); stroke-width: 1; }
+.radar-spoke { stroke: rgba(42,36,48,0.14); stroke-width: 1; }
+.radar-area { fill: rgba(176,122,46,0.26); stroke: #B07A2E; stroke-width: 1.5; }
+.radar-label {
+  fill: var(--muted);
+  font-size: 9px;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  font-family: "IBM Plex Sans JP", sans-serif;
+}
+.tags-block { margin: 0 0 0.65rem; }
+.tags-label {
+  margin: 0 0 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.sweetness {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.4rem 0 0.65rem;
+}
+.sweet-label { font-size: 0.72rem; color: var(--muted); }
+.sweet-cell {
+  width: 1.1rem;
+  height: 0.45rem;
+  background: rgba(42,36,48,0.12);
+}
+.sweet-cell.on { background: var(--accent); }
+.tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.75rem; }
+.rakuten-review { margin: 0 0 0.55rem; font-size: 0.88rem; color: var(--muted); }
+.tag {
+  font-size: 0.78rem;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  padding: 0.1rem 0;
+}
+
+.memo {
+  background: var(--memo);
+  padding: 0.75rem 0.85rem;
+  margin: 0 0 0.85rem;
+  border-left: 3px solid color-mix(in srgb, var(--accent) 55%, #E8C96A);
+}
+.memo-label {
+  margin: 0 0 0.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--accent-press);
+}
+.memo p { margin: 0; font-size: 0.92rem; }
+.memo-tasting { margin-top: 0.45rem !important; color: var(--muted); }
+.btn-row { display: grid; gap: 0.5rem; }
+.btn-row.secondary { margin-top: 0.45rem; }
+.btn {
+  min-height: var(--tap);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-press); }
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+.btn.disabled { opacity: 0.45; pointer-events: none; }
+
+.panel {
+  margin: 1.5rem 0;
+  padding: 0.35rem 0 1.15rem;
+  border-bottom: 1px solid var(--line);
+  animation: lamp-in 0.85s ease both;
+}
+.panel h2 {
+  font-size: 1.12rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+}
+.panel .sub { margin: 0 0 0.85rem; color: var(--muted); font-size: 0.9rem; }
+.offer { margin: 0 0 0.85rem; }
+.offer .note { margin: 0.35rem 0 0; font-size: 0.84rem; color: var(--muted); }
+.affiliate-note {
+  margin: 0.75rem 0 1.25rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.footer {
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.footer p { margin: 0.35rem 0; }
+.footer a { color: inherit; }
+
+.sticky-cta {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 30;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: var(--sticky-h);
+  padding: 0.55rem 1rem calc(0.55rem + env(safe-area-inset-bottom));
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -4px 18px rgba(42,36,48,0.08);
+}
+.sticky-cta.is-on { display: flex; }
+.sticky-cta .name {
+  font-size: 0.86rem;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 48%;
+}
+.sticky-cta .btn { flex: 1; max-width: 14rem; }
+
+@keyframes lamp-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before { animation: none !important; }
+}
+@media (min-width: 900px) {
+  .sticky-cta { display: none !important; }
+}
+</style>
+</head>
+<body>
+<header class="site-header shell" style="max-width:720px;margin:0 auto;padding-left:1.1rem;padding-right:1.1rem;">
+  <a class="brand" href="../index.html" id="brand-home">酒袋の日本酒ナビ</a>
+  <nav><a href="../best.html" id="nav-best">迷ったとき</a></nav>
+</header>
+<div class="shell" id="main">
+
+  <section class="hero">
+    <span class="eyebrow-label">特集</span>
+    <h1>疲れた夜の甘口寄り入門</h1>
+    <p class="hook">日本酒に興味はあるけど、なんとなく手が止まる夜、ある。</p>
+  </section>
+  <div class="trust">
+    <span>SSI認定日本酒ナビゲーター</span>
+    <span>更新日 2026-07-31</span>
+    <span>広告を含みます</span>
+    <span>Amazonアソシエイトを含みます</span>
+  </div>
+  <section class="criteria">
+    <h2>見るポイント</h2>
+    <ol><li>香りが立ちやすいか（初心者のイメージと違う甘さ・フルーティーさがあるか）</li><li>食事・晩酌・ギフトなど、場面に合うか</li><li>ECで手が届く入手先があるか</li></ol>
+  </section>
+  
+<section class="hero-pick" id="hero-pick">
+  <p class="eyebrow">この特集の本命</p>
+  <h2>風の森</h2>
+  <div class="hero-photo"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/meishu-honpo/cabinet/01/38130001_1.jpg?_ex=500x500" alt="風の森" loading="lazy" width="800" height="600" /></div>
+
+<figure class="radar" aria-label="さけのわフレーバーチャート">
+  <svg viewBox="0 0 200 200" width="200" height="200" role="img">
+    <polygon points="100.0,82.0 115.6,91.0 115.6,109.0 100.0,118.0 84.4,109.0 84.4,91.0" class="radar-grid" /><polygon points="100.0,64.0 131.2,82.0 131.2,118.0 100.0,136.0 68.8,118.0 68.8,82.0" class="radar-grid" /><polygon points="100.0,46.0 146.8,73.0 146.8,127.0 100.0,154.0 53.2,127.0 53.2,73.0" class="radar-grid" /><polygon points="100.0,28.0 162.4,64.0 162.4,136.0 100.0,172.0 37.6,136.0 37.6,64.0" class="radar-grid" />
+    <line x1="100.0" y1="100.0" x2="100.0" y2="28.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="162.4" y2="64.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="162.4" y2="136.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="100.0" y2="172.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="37.6" y2="136.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="37.6" y2="64.0" class="radar-spoke" />
+    <polygon points="100.0,64.8 129.2,83.1 114.5,108.4 100.0,119.1 87.5,107.2 61.8,77.9" class="radar-area" />
+    <text x="100.0" y="12.0" class="radar-label">華やか</text><text x="176.2" y="56.0" class="radar-label">芳醇</text><text x="176.2" y="144.0" class="radar-label">重厚</text><text x="100.0" y="188.0" class="radar-label">穏やか</text><text x="23.8" y="144.0" class="radar-label">ドライ</text><text x="23.8" y="56.0" class="radar-label">軽快</text>
+  </svg>
+</figure>
+
+<div class="sweetness" aria-label="甘辛 4/5"><span class="sweet-label">辛口</span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell"></span><span class="sweet-label">甘口</span></div>
+<div class="tags-block"><p class="tags-label">飲んだ人のタグ</p><div class="tags"><span class="tag">ガス</span><span class="tag">酸味</span><span class="tag">フルーティ</span></div></div>
+<aside class="memo" aria-label="酒袋メモ"><p class="memo-label">酒袋メモ</p><p>秋津穂657・生酒。ガスと酸味が立つ、軽快な生酒。</p></aside>
+<p class="rakuten-review">楽天上の評価 ★4.71（レビュー51件）</p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/hgc/g00rf3en.xhnea918.g00rf3en.xhneb5b8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmeishu-honpo%2F38130001%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmeishu-honpo%2Fi%2F10004252%2F&amp;rafcid=wsc_i_is_2cad5332-afda-4ae8-9c8e-d4b9c81f6151&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=20260731-amayaguchi_nyumon-a70f2809" rel="nofollow sponsored noopener" target="_blank" data-item-id="sakenowa_792" data-shop="rakuten">楽天で在庫・価格を確認</a>
+  </div>
+</section>
+
+  <div class="jump" aria-label="銘柄ジャンプ"><a href="#item-sakenowa_792">風の森</a> <a href="#item-hanamura">花邑</a> <a href="#item-koueikiku">光栄菊</a></div>
+  
+<article class="card type-junshu" id="item-hanamura" data-item-id="hanamura">
+  <div class="card-rail" aria-hidden="true"></div>
+  <div class="card-body">
+    <div class="card-head">
+      <span class="card-num">1</span>
+      
+      <span class="type-badge">醇酒</span>
+      <span class="chip">4,000〜6,000円</span>
+    </div>
+    <h3>花邑</h3>
+    <p class="card-meta">秋田 / 両関酒造</p>
+    <div class="card-photo"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/courage0115/cabinet/07268497/80412.jpg?_ex=400x400" alt="花邑" loading="lazy" width="640" height="480" /></div>
+
+<figure class="radar" aria-label="さけのわフレーバーチャート">
+  <svg viewBox="0 0 200 200" width="200" height="200" role="img">
+    <polygon points="100.0,82.0 115.6,91.0 115.6,109.0 100.0,118.0 84.4,109.0 84.4,91.0" class="radar-grid" /><polygon points="100.0,64.0 131.2,82.0 131.2,118.0 100.0,136.0 68.8,118.0 68.8,82.0" class="radar-grid" /><polygon points="100.0,46.0 146.8,73.0 146.8,127.0 100.0,154.0 53.2,127.0 53.2,73.0" class="radar-grid" /><polygon points="100.0,28.0 162.4,64.0 162.4,136.0 100.0,172.0 37.6,136.0 37.6,64.0" class="radar-grid" />
+    <line x1="100.0" y1="100.0" x2="100.0" y2="28.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="162.4" y2="64.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="162.4" y2="136.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="100.0" y2="172.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="37.6" y2="136.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="37.6" y2="64.0" class="radar-spoke" />
+    <polygon points="100.0,63.8 137.9,78.1 116.1,109.3 100.0,128.4 89.2,106.3 78.1,87.3" class="radar-area" />
+    <text x="100.0" y="12.0" class="radar-label">華やか</text><text x="176.2" y="56.0" class="radar-label">芳醇</text><text x="176.2" y="144.0" class="radar-label">重厚</text><text x="100.0" y="188.0" class="radar-label">穏やか</text><text x="23.8" y="144.0" class="radar-label">ドライ</text><text x="23.8" y="56.0" class="radar-label">軽快</text>
+  </svg>
+</figure>
+
+<div class="sweetness" aria-label="甘辛 4/5"><span class="sweet-label">辛口</span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell"></span><span class="sweet-label">甘口</span></div>
+<div class="tags-block"><p class="tags-label">飲んだ人のタグ</p><div class="tags"><span class="tag">甘味</span><span class="tag">フルーティ</span><span class="tag">華やか</span></div></div>
+<aside class="memo" aria-label="酒袋メモ"><p class="memo-label">酒袋メモ</p><p>陸羽田・純米。華やかさと甘口がセットで来る。</p></aside>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/hgc/g00slbkn.xhnea502.g00slbkn.xhneb9bc/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcourage0115%2F10000471%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fcourage0115%2Fi%2F10000471%2F&amp;rafcid=wsc_i_is_2cad5332-afda-4ae8-9c8e-d4b9c81f6151&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=20260731-amayaguchi_nyumon-a70f2809" rel="nofollow sponsored noopener" target="_blank" data-item-id="hanamura" data-shop="rakuten">楽天で在庫・価格を確認</a>
+    </div>
+    <div class="btn-row secondary"><a class="btn btn-ghost" href="https://www.amazon.co.jp/s?k=%E8%8A%B1%E9%82%91+%E6%97%A5%E6%9C%AC%E9%85%92&amp;tag=fukasiba-22&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=20260731-amayaguchi_nyumon-a70f2809" rel="nofollow sponsored noopener" target="_blank" data-item-id="hanamura" data-shop="amazon">Amazonで見る</a></div>
+  </div>
+</article>
+
+<article class="card type-soushu" id="item-koueikiku" data-item-id="koueikiku">
+  <div class="card-rail" aria-hidden="true"></div>
+  <div class="card-body">
+    <div class="card-head">
+      <span class="card-num">2</span>
+      
+      <span class="type-badge">爽酒</span>
+      <span class="chip">2,000〜4,000円</span>
+    </div>
+    <h3>光栄菊</h3>
+    <p class="card-meta">佐賀 / 光栄菊酒造</p>
+    <div class="card-photo"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/auc-chitashige/cabinet/03819677/35/imgrc0088337911.jpg?_ex=400x400" alt="光栄菊" loading="lazy" width="640" height="480" /></div>
+
+<figure class="radar" aria-label="さけのわフレーバーチャート">
+  <svg viewBox="0 0 200 200" width="200" height="200" role="img">
+    <polygon points="100.0,82.0 115.6,91.0 115.6,109.0 100.0,118.0 84.4,109.0 84.4,91.0" class="radar-grid" /><polygon points="100.0,64.0 131.2,82.0 131.2,118.0 100.0,136.0 68.8,118.0 68.8,82.0" class="radar-grid" /><polygon points="100.0,46.0 146.8,73.0 146.8,127.0 100.0,154.0 53.2,127.0 53.2,73.0" class="radar-grid" /><polygon points="100.0,28.0 162.4,64.0 162.4,136.0 100.0,172.0 37.6,136.0 37.6,64.0" class="radar-grid" />
+    <line x1="100.0" y1="100.0" x2="100.0" y2="28.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="162.4" y2="64.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="162.4" y2="136.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="100.0" y2="172.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="37.6" y2="136.0" class="radar-spoke" /><line x1="100.0" y1="100.0" x2="37.6" y2="64.0" class="radar-spoke" />
+    <polygon points="100.0,62.0 130.8,82.2 110.4,106.0 100.0,116.5 90.7,105.4 61.8,78.0" class="radar-area" />
+    <text x="100.0" y="12.0" class="radar-label">華やか</text><text x="176.2" y="56.0" class="radar-label">芳醇</text><text x="176.2" y="144.0" class="radar-label">重厚</text><text x="100.0" y="188.0" class="radar-label">穏やか</text><text x="23.8" y="144.0" class="radar-label">ドライ</text><text x="23.8" y="56.0" class="radar-label">軽快</text>
+  </svg>
+</figure>
+
+<div class="sweetness" aria-label="甘辛 4/5"><span class="sweet-label">辛口</span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell on"></span><span class="sweet-cell"></span><span class="sweet-label">甘口</span></div>
+<div class="tags-block"><p class="tags-label">飲んだ人のタグ</p><div class="tags"><span class="tag">オレンジ</span><span class="tag">ガス</span><span class="tag">酸味</span></div></div>
+<aside class="memo" aria-label="酒袋メモ"><p class="memo-label">酒袋メモ</p><p>サンバースト・純米生原酒。ガスと酸味が立つ、冷やして飲む一本。</p></aside>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/hgc/g00qk4sn.xhnea544.g00qk4sn.xhneb852/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fauc-chitashige%2F34110320%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fauc-chitashige%2Fi%2F10011095%2F&amp;rafcid=wsc_i_is_2cad5332-afda-4ae8-9c8e-d4b9c81f6151&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=20260731-amayaguchi_nyumon-a70f2809" rel="nofollow sponsored noopener" target="_blank" data-item-id="koueikiku" data-shop="rakuten">楽天で在庫・価格を確認</a>
+    </div>
+    <div class="btn-row secondary"><a class="btn btn-ghost" href="https://www.amazon.co.jp/s?k=%E5%85%89%E6%A0%84%E8%8F%8A+%E6%97%A5%E6%9C%AC%E9%85%92&amp;tag=fukasiba-22&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=20260731-amayaguchi_nyumon-a70f2809" rel="nofollow sponsored noopener" target="_blank" data-item-id="koueikiku" data-shop="amazon">Amazonで見る</a></div>
+  </div>
+</article>
+
+  <p class="affiliate-note">Amazonのリンクはアソシエイトプログラムの一環として報酬が発生する場合があります。</p>
+  <section class="panel">
+    <h2>選ぶのが面倒なとき</h2>
+    <p class="sub">特集の外でも戻れる定番</p>
+    <div class="offer-row"><div class="offer-thumb"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/ono-sake/cabinet/00958694/07397713/sk-000005.jpg?_ex=200x200" alt="獺祭 純米大吟醸45" loading="lazy" width="144" height="144" /></div><div class="offer-body"><a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/ichiba/563ed255.df4aa4f7.563ed256.a21707cf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsyuraku-shop%2F40578%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=20260731-amayaguchi_nyumon-a70f2809-evergreen" rel="nofollow sponsored noopener" target="_blank" data-item-id="" data-shop="rakuten">香り系の基準点・獺祭45</a><p class=note>香り系の定番。初めてでも味の方向がわかりやすい一本。</p></div></div>
+<div class="offer-row"><div class="offer-thumb"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/gekkeikan/cabinet/set/2607_040018_kago.jpg?_ex=200x200" alt="月桂冠 日本酒飲み比べミニボトル5本セット" loading="lazy" width="144" height="144" /></div><div class="offer-body"><a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/ichiba/563ed5c8.7ebb4c8e.563ed5c9.3ed782e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgekkeikan%2Fsake2015f%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=20260731-amayaguchi_nyumon-a70f2809-evergreen" rel="nofollow sponsored noopener" target="_blank" data-item-id="" data-shop="rakuten">甘口〜辛口を試す飲み比べ5本</a><p class=note>場面がまだ曖昧なときの飲み比べ。甘口から辛口まで少しずつ試せる。</p></div></div>
+  </section>
+
+<footer class="footer">
+  <p>酒袋（さけぶくろ）@sakebukuro_official</p>
+  <p>お酒は20歳になってから。在庫・価格はリンク先の表示を優先。味覚・銘柄データに<a href="https://sakenowa.com" rel="noopener">さけのわデータ</a>を利用。</p>
+</footer>
+</div>
+
+<div class="sticky-cta" id="sticky-cta">
+  <span class="name" id="sticky-name"></span>
+  <a class="btn btn-primary" id="sticky-btn" href="#" rel="nofollow sponsored noopener" target="_blank" data-shop="rakuten">楽天で見る</a>
+</div>
+
+<script>
+(function () {
+  const sticky = document.getElementById('sticky-cta');
+  const stickyName = document.getElementById('sticky-name');
+  const stickyBtn = document.getElementById('sticky-btn');
+  const cards = Array.from(document.querySelectorAll('.card[data-item-id]'));
+  if (!sticky || !stickyBtn || !cards.length) return;
+
+  function setActive(card) {
+    if (!card) return;
+    const id = card.getAttribute('data-item-id');
+    const nameEl = card.querySelector('h3');
+    const btn = card.querySelector('a.btn-primary[data-shop="rakuten"]');
+    stickyName.textContent = nameEl ? nameEl.textContent : '';
+    if (btn && btn.href) {
+      stickyBtn.href = btn.href;
+      stickyBtn.classList.remove('disabled');
+      stickyBtn.setAttribute('data-item-id', id || '');
+    }
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible) setActive(visible.target);
+  }, { rootMargin: '-35% 0px -45% 0px', threshold: [0.2, 0.5, 0.8] });
+  cards.forEach(c => io.observe(c));
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 280) sticky.classList.add('is-on');
+    else sticky.classList.remove('is-on');
+  }, { passive: true });
+
+  document.querySelectorAll('.jump a').forEach(a => {
+    a.addEventListener('click', () => {
+      const id = a.getAttribute('href');
+      if (!id || !id.startsWith('#')) return;
+      const el = document.querySelector(id);
+      if (!el) return;
+      el.classList.add('is-highlight');
+      setTimeout(() => el.classList.remove('is-highlight'), 1200);
+    });
+  });
+
+  const params = new URLSearchParams(location.search);
+  const item = params.get('item');
+  if (item) {
+    const el = document.getElementById('item-' + item);
+    if (el) {
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        el.classList.add('is-highlight');
+        setActive(el);
+        sticky.classList.add('is-on');
+      }, 80);
+    }
+  } else {
+    setActive(cards[0]);
+  }
+})();
+</script>
+<script>
+  (function(){
+    var depth = location.pathname.indexOf('/p/') >= 0 ? '../' : './';
+    var root = document.documentElement;
+    root.style.setProperty('--bg-scene', "url('" + depth + "assets/bg-sake-bottle.jpg')");
+    root.style.setProperty('--hero-scene', "url('" + depth + "assets/bg-sake-set.jpg')");
+    var brand = document.getElementById('brand-home');
+    var best = document.getElementById('nav-best');
+    if (brand) brand.href = depth + 'index.html';
+    if (best) best.href = depth + 'best.html';
+  })();
+</script>
+</body>
+</html>
