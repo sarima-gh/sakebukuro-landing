@@ -450,12 +450,14 @@ a { color: var(--ink); }
 .feature-row:last-child { border-bottom: none; }
 .feature-thumb,
 .offer-thumb {
+  display: block;
   width: 80px;
   height: 80px;
   overflow: hidden;
   background: var(--photo-bg);
   border-radius: 4px;
   border: 1px solid var(--line-subtle);
+  text-decoration: none;
 }
 .feature-thumb img,
 .offer-thumb img {
