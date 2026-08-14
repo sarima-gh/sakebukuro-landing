@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="日本酒に興味はあるけど…な人向け。シーン別の特集と、手が届く入手先がわかる。" />
+  <meta name="description" content="日本酒を避けてきた人と、店で飲んだ一本を家で探している人へ。場面ごとに3本だけ選んで、買える場所まで置いています。" />
   <title>迷ったときの選び方</title>
   
   <link rel="canonical" href="https://sarima-gh.github.io/sakebukuro-landing/best.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="迷ったときの選び方" />
-  <meta property="og:description" content="日本酒に興味はあるけど…な人向け。シーン別の特集と、手が届く入手先がわかる。" />
+  <meta property="og:description" content="日本酒を避けてきた人と、店で飲んだ一本を家で探している人へ。場面ごとに3本だけ選んで、買える場所まで置いています。" />
   <meta property="og:url" content="https://sarima-gh.github.io/sakebukuro-landing/best.html" />
   <meta property="og:site_name" content="酒袋の日本酒ナビ" />
   
@@ -18,541 +18,16 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="迷ったときの選び方" />
-  <meta name="twitter:description" content="日本酒に興味はあるけど…な人向け。シーン別の特集と、手が届く入手先がわかる。" />
+  <meta name="twitter:description" content="日本酒を避けてきた人と、店で飲んだ一本を家で探している人へ。場面ごとに3本だけ選んで、買える場所まで置いています。" />
 
-  <style>
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=IBM+Plex+Sans+JP:wght@400;500;600&display=swap');
-
-:root {
-  --bg: #F6EFE4;
-  --paper: #FFF8F0;
-  --ink: #2A2430;
-  --muted: #5C534C;
-  --accent: #B07A2E;
-  --accent-press: #8F6224;
-  --memo: #FFF1C4;
-  --line: rgba(42, 36, 48, 0.12);
-  --kunshu: #E8B4A8;
-  --soushu: #7BAE9E;
-  --junshu: #C4A484;
-  --jukushu: #8B5E3C;
-  --sticky-h: 56px;
-  --tap: 44px;
-  --bg-scene: url('./assets/bg-sake-bottle.jpg');
-  --hero-scene: url('./assets/bg-sake-set.jpg');
-  --photo-bg: #F3E8D6;
-}
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  min-height: 100vh;
-  color: var(--ink);
-  font-family: "IBM Plex Sans JP", "Hiragino Sans", sans-serif;
-  font-size: 16px;
-  line-height: 1.75;
-  background:
-    radial-gradient(ellipse 120% 70% at 50% -10%, rgba(176,122,46,0.16), transparent 55%),
-    linear-gradient(180deg, rgba(246,239,228,0.78) 0%, rgba(246,239,228,0.90) 45%, rgba(246,239,228,0.96) 100%),
-    var(--bg-scene) center top / cover no-repeat scroll,
-    var(--bg);
-}
-a { color: var(--ink); }
-.shell {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 1.1rem 5.5rem;
-}
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.85rem 0;
-  background: color-mix(in srgb, var(--bg) 86%, transparent);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
-}
-.site-header .brand {
-  font-family: "Shippori Mincho", serif;
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-}
-.site-header nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem 1rem;
-  justify-content: flex-end;
-}
-.site-header nav a {
-  font-size: 0.9rem;
-  color: var(--muted);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-.site-header nav a:hover { border-color: var(--accent); color: var(--ink); }
-.site-nav-end {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem 1.1rem;
-  margin: 1.5rem 0 0;
-  padding: 0.85rem 0 0;
-  border-top: 1px solid var(--line);
-  font-size: 0.9rem;
-}
-.site-nav-end a {
-  color: var(--muted);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-.site-nav-end a:hover { border-color: var(--accent); color: var(--ink); }
-.back-to-index {
-  margin: 1.25rem 0 0.25rem;
-  font-size: 0.95rem;
-}
-.back-to-index a {
-  color: var(--ink);
-  text-decoration: none;
-  border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line));
-}
-.back-to-index a:hover { border-color: var(--accent); }
-.hero {
-  position: relative;
-  padding: 1.4rem 0 0.35rem;
-  animation: lamp-in 0.8s ease both;
-}
-.hero::before {
-  content: "";
-  display: block;
-  height: clamp(7.5rem, 28vw, 11rem);
-  margin: 0 0 1rem;
-  border-radius: 0;
-  background:
-    linear-gradient(180deg, rgba(176,122,46,0.12), rgba(246,239,228,0.82)),
-    var(--hero-scene) center / cover no-repeat;
-  box-shadow: inset 0 -1px 0 var(--line);
-}
-.eyebrow-label {
-  display: inline-block;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
-  padding: 0.15rem 0;
-  margin-bottom: 0.7rem;
-}
-.hero h1 {
-  font-family: "IBM Plex Sans JP", "Hiragino Sans", sans-serif;
-  font-size: clamp(1.45rem, 4.8vw, 1.95rem);
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: 0.02em;
-  margin: 0 0 0.7rem;
-}
-.hero h1.is-brand {
-  font-family: "Shippori Mincho", serif;
-  font-weight: 700;
-  font-size: clamp(1.55rem, 5vw, 2.1rem);
-  letter-spacing: 0.03em;
-}
-.hero .hook {
-  margin: 0;
-  color: var(--muted);
-  font-size: 1rem;
-}
-.concept {
-  margin: 0 0 1.35rem;
-  padding: 0.15rem 0 1.1rem;
-  border-bottom: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 0.95rem;
-  animation: lamp-in 1s ease both;
-  animation-delay: 0.08s;
-}
-.feature-intro {
-  margin: 0 0 1.35rem;
-  padding: 1.05rem 1.1rem 1.15rem;
-  background: color-mix(in srgb, var(--memo) 70%, var(--paper));
-  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--line));
-  color: var(--ink);
-  font-size: 0.95rem;
-  animation: lamp-in 1s ease both;
-  animation-delay: 0.08s;
-}
-.feature-intro h2 {
-  font-size: 0.92rem;
-  font-weight: 600;
-  margin: 0 0 0.45rem;
-}
-.feature-intro h2 + p,
-.feature-intro h2 + ul { margin-top: 0; }
-.feature-intro .intro-block + .intro-block { margin-top: 1rem; }
-.feature-intro ul {
-  margin: 0;
-  padding-left: 1.2rem;
-  color: var(--muted);
-}
-.feature-intro li { margin: 0.3rem 0; }
-.concept p,
-.feature-intro p { margin: 0 0 0.65rem; }
-.concept p:last-child,
-.feature-intro p:last-child { margin-bottom: 0; }
-.trust {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem 0.9rem;
-  margin: 1rem 0 1.15rem;
-  padding: 0.7rem 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  font-size: 0.82rem;
-  color: var(--muted);
-}
-.criteria {
-  margin: 0 0 1.5rem;
-  padding: 0.85rem 0 1.1rem;
-  border-bottom: 1px solid var(--line);
-}
-.criteria h2 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin: 0 0 0.55rem;
-}
-.criteria ol {
-  margin: 0;
-  padding-left: 1.2rem;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-.criteria li { margin: 0.25rem 0; }
-
-.pick-label {
-  font-size: 0.72rem;
-  color: var(--muted);
-  border: 1px solid var(--line);
-  padding: 0.1rem 0.45rem;
-}
-
-.card {
-  position: relative;
-  display: grid;
-  grid-template-columns: 6px 1fr;
-  margin: 0 0 1.15rem;
-  background: color-mix(in srgb, var(--paper) 88%, transparent);
-  border-bottom: 1px solid var(--line);
-  scroll-margin-top: 5.5rem;
-}
-.card.is-highlight { outline: 2px solid color-mix(in srgb, var(--accent) 70%, white); outline-offset: 2px; }
-.card-rail { background: var(--ink); opacity: 0.25; }
-.type-kunshu .card-rail { background: var(--kunshu); opacity: 1; }
-.type-soushu .card-rail { background: var(--soushu); opacity: 1; }
-.type-junshu .card-rail { background: var(--junshu); opacity: 1; }
-.type-jukushu .card-rail { background: var(--jukushu); opacity: 1; }
-.card-body { padding: 1rem 0.85rem 1.15rem 1rem; }
-.card-head { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-bottom: 0.35rem; }
-.hero-mark {
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  color: var(--accent);
-  border: 1px solid color-mix(in srgb, var(--accent) 45%, white);
-  padding: 0.1rem 0.45rem;
-}
-.type-badge, .chip {
-  font-size: 0.72rem;
-  color: var(--muted);
-  border: 1px solid var(--line);
-  padding: 0.1rem 0.45rem;
-}
-.card h3 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin: 0.2rem 0 0.25rem;
-}
-.card-meta { margin: 0 0 0.7rem; color: var(--muted); font-size: 0.86rem; }
-.card-photo,
-.hero-photo {
-  margin: 0 auto 0.85rem;
-  width: 100%;
-  max-width: 220px;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  background: var(--photo-bg);
-  border: 1px solid var(--line);
-}
-.card-photo img,
-.hero-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-  padding: 0.7rem;
-  box-sizing: border-box;
-  background: var(--photo-bg);
-}
-
-.feature-row {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 0.85rem;
-  align-items: center;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--line);
-  text-decoration: none;
-  color: inherit;
-}
-.feature-row:last-child { border-bottom: none; }
-.feature-thumb,
-.offer-thumb {
-  width: 80px;
-  height: 80px;
-  overflow: hidden;
-  background: var(--photo-bg);
-}
-.feature-thumb img,
-.offer-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  background: var(--photo-bg);
-}
-.feature-thumb.is-empty,
-.offer-thumb.is-empty {
-  background:
-    linear-gradient(145deg, color-mix(in srgb, var(--accent) 18%, var(--photo-bg)), var(--photo-bg));
-}
-.feature-scene {
-  display: block;
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  color: var(--accent);
-  margin-bottom: 0.2rem;
-}
-.feature-title {
-  display: block;
-  font-weight: 600;
-  font-size: 1.02rem;
-  line-height: 1.4;
-  margin-bottom: 0.25rem;
-}
-.feature-note { display: block; font-size: 0.86rem; color: var(--muted); }
-
-.offer-row {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 0.75rem;
-  align-items: start;
-  margin: 0.85rem 0;
-}
-.offer-body .btn { width: 100%; }
-
-.radar {
-  margin: 0.55rem auto 0.75rem;
-  max-width: 220px;
-  text-align: center;
-}
-.radar svg { display: block; margin: 0 auto; width: 200px; height: 200px; }
-.radar-grid { fill: none; stroke: rgba(42,36,48,0.12); stroke-width: 1; }
-.radar-spoke { stroke: rgba(42,36,48,0.14); stroke-width: 1; }
-.radar-area { fill: rgba(176,122,46,0.26); stroke: #B07A2E; stroke-width: 1.5; }
-.radar-label {
-  fill: var(--muted);
-  font-size: 9px;
-  text-anchor: middle;
-  dominant-baseline: middle;
-  font-family: "IBM Plex Sans JP", sans-serif;
-}
-.tags-block { margin: 0 0 0.65rem; }
-.tags-label {
-  margin: 0 0 0.3rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-}
-.sweetness {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  margin: 0.4rem 0 0.65rem;
-}
-.sweet-label { font-size: 0.72rem; color: var(--muted); }
-.sweet-cell {
-  width: 1.1rem;
-  height: 0.45rem;
-  background: rgba(42,36,48,0.12);
-}
-.sweet-cell.on { background: var(--accent); }
-.tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.75rem; }
-.rakuten-review { margin: 0 0 0.55rem; font-size: 0.88rem; color: var(--muted); }
-.tag {
-  font-size: 0.78rem;
-  color: var(--muted);
-  border-bottom: 1px solid var(--line);
-  padding: 0.1rem 0;
-}
-.serve-temp-block { margin: 0 0 0.75rem; }
-.serve-temp-label {
-  margin: 0 0 0.25rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-}
-.serve-temp-value {
-  margin: 0;
-  font-size: 0.92rem;
-  color: var(--ink);
-}
-
-.memo {
-  background: var(--memo);
-  padding: 0.75rem 0.85rem;
-  margin: 0 0 0.85rem;
-  border-left: 3px solid color-mix(in srgb, var(--accent) 55%, #E8C96A);
-}
-.memo-label {
-  margin: 0 0 0.25rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  color: var(--accent-press);
-}
-.memo p { margin: 0; font-size: 0.92rem; }
-.memo-tasting { margin-top: 0.45rem !important; color: var(--muted); }
-
-/* 特集専用ヒント（デフォルトのタグ帯・チップとは別デザイン） */
-.feature-hint {
-  margin: -0.25rem 0 0.85rem;
-  padding: 0.65rem 0 0;
-  border-top: 1px dashed var(--line);
-}
-.feature-hint-label {
-  margin: 0 0 0.35rem;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: var(--accent-press);
-}
-.feature-hint-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 0.2rem;
-}
-.feature-hint-list li {
-  margin: 0;
-  padding: 0 0 0 0.85rem;
-  position: relative;
-  font-size: 0.88rem;
-  color: var(--ink);
-  line-height: 1.5;
-}
-.feature-hint-list li::before {
-  content: "·";
-  position: absolute;
-  left: 0.15rem;
-  color: var(--accent);
-  font-weight: 700;
-}
-.btn-row { display: grid; gap: 0.5rem; }
-.btn-row.secondary { margin-top: 0.45rem; }
-.btn {
-  min-height: var(--tap);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.7rem 1rem;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  border: none;
-}
-.btn-primary { background: var(--accent); color: #fff; }
-.btn-primary:hover { background: var(--accent-press); }
-.btn-ghost {
-  background: transparent;
-  color: var(--ink);
-  border: 1px solid var(--line);
-}
-.btn.disabled { opacity: 0.45; pointer-events: none; }
-
-.panel {
-  margin: 1.5rem 0;
-  padding: 0.35rem 0 1.15rem;
-  border-bottom: 1px solid var(--line);
-  animation: lamp-in 0.85s ease both;
-}
-.panel h2 {
-  font-size: 1.12rem;
-  font-weight: 600;
-  margin: 0 0 0.4rem;
-}
-.panel .sub { margin: 0 0 0.85rem; color: var(--muted); font-size: 0.9rem; }
-.offer { margin: 0 0 0.85rem; }
-.offer .note { margin: 0.35rem 0 0; font-size: 0.84rem; color: var(--muted); }
-
-.footer {
-  margin-top: 1.75rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--line);
-  font-size: 0.78rem;
-  color: var(--muted);
-  line-height: 1.65;
-}
-.footer p { margin: 0.35rem 0; }
-.footer a { color: inherit; }
-
-.sticky-cta {
-  position: fixed;
-  left: 0; right: 0; bottom: 0;
-  z-index: 30;
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  min-height: var(--sticky-h);
-  padding: 0.55rem 1rem calc(0.55rem + env(safe-area-inset-bottom));
-  background: var(--paper);
-  border-top: 1px solid var(--line);
-  box-shadow: 0 -4px 18px rgba(42,36,48,0.08);
-}
-.sticky-cta.is-on { display: flex; }
-.sticky-cta .name {
-  font-size: 0.86rem;
-  color: var(--muted);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 48%;
-}
-.sticky-cta .btn { flex: 1; max-width: 14rem; }
-
-@keyframes lamp-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@media (prefers-reduced-motion: reduce) {
-  *, *::before { animation: none !important; }
-}
-@media (min-width: 900px) {
-  .sticky-cta { display: none !important; }
-}
-</style>
+  <link rel="stylesheet" href="./assets/site.css" />
 </head>
 <body>
-<header class="site-header shell" style="max-width:720px;margin:0 auto;padding-left:1.1rem;padding-right:1.1rem;">
-  <a class="brand" href="https://sarima-gh.github.io/sakebukuro-landing/" id="brand-home">酒袋の日本酒ナビ</a>
+<header class="site-header">
+  <a class="brand" href="./index.html" id="brand-home">酒袋の日本酒ナビ</a>
   <nav>
-    <a href="https://sarima-gh.github.io/sakebukuro-landing/" id="nav-index" data-nav="index">特集一覧</a>
-    <a href="https://sarima-gh.github.io/sakebukuro-landing/best.html" id="nav-best" data-nav="best">迷ったとき</a>
+    <a href="./index.html" id="nav-index" data-nav="index">特集一覧</a>
+    <a href="./best.html" id="nav-best" data-nav="best">迷ったとき</a>
   </nav>
 </header>
 <div class="shell" id="main">
@@ -560,27 +35,28 @@ a { color: var(--ink); }
   <section class="hero">
     <span class="eyebrow-label">選び方</span>
     <h1>迷ったときの選び方</h1>
-    <p class="hook">特集の前に、味の方向だけ先に決めるページです。</p>
+    <p class="hook">銘柄を覚える前に、味の方向だけ決めてしまうページ。香りが先に来るのか、キレが先に来るのか。そこが決まると棚の前が短くなります。</p>
   </section>
   <div class="trust">
     <span>SSI認定日本酒ナビゲーター</span>
     <span>広告を含みます</span>
   </div>
-  <section class="concept"><p>見るポイントを押さえてから、定番か特集へ。</p></section>
+  <section class="concept"><p>見るポイントを押さえてから、定番か特集へ。選ぶ負担を減らすのが先で、新しい銘柄はそのあとでいい。</p></section>
+  <section class="stance"><h2>味の説明について</h2><p>このサイトでは、味の説明をボクの感想でやりません。日本酒は毎年味が変わります。特に新しい造りのものはその差が大きく、何年か前に飲んだ印象を、今売っている一本の説明にすることはできないと考えています。</p><p>なので味の話は、飲んだ人のタグと、蔵元が「こう飲んでほしい」と言っている内容から書いています。ボクが書くのは、どれを選んでどれを外したか、どの場面に置くか、どこで失敗しやすいか。そこは責任を持ちます。</p></section>
   <section class="criteria">
     <h2>見るポイント</h2>
     <ol><li>香りが立つか（「酒臭い」だけで終わらないか）</li><li>甘さやフルーティーさでとっつきやすいか</li><li>ECで手が届く入手先があるか</li></ol>
   </section>
   <section class="panel">
     <h2>迷ったときの定番</h2>
-    <p class="sub">選ぶ負担を減らす一本</p>
+    <p class="sub">方向がまだ曖昧なときの、戻れる一本。</p>
     <div class="offer-row"><div class="offer-thumb"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/ono-sake/cabinet/00958694/07397713/sk-000005.jpg?_ex=200x200" alt="獺祭 純米大吟醸45" loading="lazy" width="160" height="160" /></div><div class="offer-body"><a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/ichiba/563ed255.df4aa4f7.563ed256.a21707cf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsyuraku-shop%2F40578%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=best" rel="nofollow sponsored noopener" target="_blank" data-item-id="" data-shop="rakuten">香り系の基準点・獺祭45</a><p class=note>香り系の定番。初めてでも味の方向がわかりやすい一本。</p></div></div>
 <div class="offer-row"><div class="offer-thumb"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/gekkeikan/cabinet/set/2607_040018_kago.jpg?_ex=200x200" alt="月桂冠 日本酒飲み比べミニボトル5本セット" loading="lazy" width="160" height="160" /></div><div class="offer-body"><a class="btn btn-primary" href="https://hb.afl.rakuten.co.jp/ichiba/563ed5c8.7ebb4c8e.563ed5c9.3ed782e8/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fgekkeikan%2Fsake2015f%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9&amp;utm_source=threads&amp;utm_medium=landing&amp;utm_campaign=best" rel="nofollow sponsored noopener" target="_blank" data-item-id="" data-shop="rakuten">甘口〜辛口を試す飲み比べ5本</a><p class=note>場面がまだ曖昧なときの飲み比べ。甘口から辛口まで少しずつ試せる。</p></div></div>
   </section>
 
   <nav class="site-nav-end" aria-label="サイト内リンク">
-    <a href="https://sarima-gh.github.io/sakebukuro-landing/" data-nav="index">特集一覧</a>
-    <a href="https://sarima-gh.github.io/sakebukuro-landing/best.html" data-nav="best">迷ったとき</a>
+    <a href="./index.html" data-nav="index">特集一覧</a>
+    <a href="./best.html" data-nav="best">迷ったとき</a>
   </nav>
 <footer class="footer">
   <p>酒袋（さけぶくろ）@sakebukuro_official</p>
@@ -596,8 +72,9 @@ a { color: var(--ink); }
     root.style.setProperty('--bg-scene', "url('" + depth + "assets/bg-sake-bottle.jpg')");
     root.style.setProperty('--hero-scene', "url('" + depth + "assets/bg-sake-set.jpg')");
     var base = "https://sarima-gh.github.io/sakebukuro-landing";
-    var indexUrl = base ? (base + '/') : (depth + 'index.html');
-    var bestUrl = base ? (base + '/best.html') : (depth + 'best.html');
+    var local = location.protocol === 'file:' || location.hostname === '127.0.0.1' || location.hostname === 'localhost';
+    var indexUrl = (!local && base) ? (base + '/') : (depth + 'index.html');
+    var bestUrl = (!local && base) ? (base + '/best.html') : (depth + 'best.html');
     document.querySelectorAll('[data-nav="index"]').forEach(function(a){ a.href = indexUrl; });
     document.querySelectorAll('[data-nav="best"]').forEach(function(a){ a.href = bestUrl; });
     var brand = document.getElementById('brand-home');
