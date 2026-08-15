@@ -609,13 +609,21 @@ a { color: var(--ink); }
 .feature-thumb,
 .offer-thumb {
   display: block;
-  width: 96px;
-  height: 96px;
   overflow: hidden;
-  background: var(--photo-bg);
   border-radius: 2px;
   border: 1px solid var(--line-subtle);
   text-decoration: none;
+}
+.feature-thumb {
+  width: 96px;
+  height: 96px;
+  background: var(--photo-bg);
+}
+.offer-thumb {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  padding: 0.45rem;
 }
 .feature-thumb img,
 .offer-thumb img {
@@ -623,10 +631,13 @@ a { color: var(--ink); }
   height: 100%;
   object-fit: contain;
   display: block;
-  background: var(--photo-bg);
 }
 .feature-thumb img {
   object-fit: cover;
+  background: var(--photo-bg);
+}
+.offer-thumb img {
+  background: #fff;
 }
 .feature-thumb.is-portrait img { object-position: 52% 58%; }
 .feature-thumb.is-lanterns img { object-position: 50% 18%; }
@@ -661,10 +672,14 @@ a { color: var(--ink); }
 
 .offer-row {
   display: grid;
-  grid-template-columns: 96px 1fr;
+  grid-template-columns: 120px 1fr;
   gap: 0.85rem;
   align-items: start;
   margin: 0.9rem 0;
+}
+.offer-row .offer-thumb {
+  width: 120px;
+  height: 120px;
 }
 .offer-body .btn { width: 100%; }
 .evergreen-bridge {
@@ -687,9 +702,9 @@ a { color: var(--ink); }
 }
 .offer-sales-head {
   display: grid;
-  grid-template-columns: 96px 1fr;
-  gap: 0.85rem;
-  align-items: start;
+  grid-template-columns: 150px 1fr;
+  gap: 1rem;
+  align-items: center;
   margin-bottom: 0.85rem;
 }
 .offer-sales h3 {
