@@ -23,6 +23,14 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="../assets/site.css" />
   
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJDNKLMB3W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WJDNKLMB3W');
+  </script>
+
 </head>
 <body>
 <header class="site-header">
@@ -330,6 +338,22 @@
     var brand = document.getElementById('brand-home');
     if (brand) brand.href = indexUrl;
   })();
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    var a = t && t.closest ? t.closest('a[rel~="sponsored"], a[data-shop]') : null;
+    if (!a || typeof gtag !== 'function') return;
+    var href = a.getAttribute('href') || '';
+    if (!href || href.charAt(0) === '#') return;
+    gtag('event', 'lp_to_asp', {
+      shop: a.getAttribute('data-shop') || '',
+      item_id: a.getAttribute('data-item-id') || '',
+      link_url: a.href
+    });
+  }, true);
+})();
 </script>
 
 </body>
