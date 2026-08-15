@@ -363,6 +363,37 @@ a { color: var(--ink); }
   line-height: 1.55;
 }
 .guide-cta a:hover { border-color: var(--accent); }
+.drank {
+  margin: 0 0 1.6rem;
+  padding: 0.2rem 0 1.2rem;
+  border-bottom: 1px solid var(--line);
+}
+.drank h2 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.45rem;
+}
+.drank .sub { margin: 0 0 0.55rem; color: var(--muted); font-size: 0.92rem; }
+.drank-count {
+  margin: 0 0 0.85rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+.drank-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.drank-list li {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
 .terms-note {
   margin: 0 0 1.2rem;
   font-size: 0.82rem;
@@ -681,6 +712,9 @@ a { color: var(--ink); }
   color: inherit;
   border-radius: 0;
   transition: background-color 0.15s ease;
+}
+.feature-row.is-text {
+  grid-template-columns: 1fr;
 }
 .feature-row:hover {
   background-color: rgba(163, 111, 38, 0.05);
