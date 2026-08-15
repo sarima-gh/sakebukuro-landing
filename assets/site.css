@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=IBM+Plex+Sans+JP:wght@400;500;600&display=swap');
 
 :root {
-  --bg: #F6EFE4;
-  --paper: #FFFDF9;
+  --bg: #F4EDE0;
+  --paper: #FFFDF8;
   --ink: #221C26;
   --muted: #574F47;
   --accent: #A36F26;
@@ -16,9 +16,7 @@
   --jukushu: #7A5030;
   --sticky-h: 56px;
   --tap: 48px;
-  --bg-scene: url('./bg-sake-bottle.jpg');
-  --hero-scene: url('./bg-sake-set.jpg');
-  --photo-bg: #F5ECD9;
+  --photo-bg: #EFE6D4;
 }
 
 * { box-sizing: border-box; }
@@ -30,40 +28,48 @@ body {
   font-family: "IBM Plex Sans JP", "Hiragino Sans", sans-serif;
   font-size: 16px;
   line-height: 1.75;
-  background:
-    radial-gradient(ellipse 120% 70% at 50% -10%, rgba(163,111,38,0.12), transparent 60%),
-    linear-gradient(180deg, rgba(246,239,228,0.85) 0%, rgba(246,239,228,0.94) 45%, rgba(246,239,228,0.98) 100%),
-    var(--bg-scene) center top / cover no-repeat scroll,
-    var(--bg);
+  background: var(--bg);
 }
 a { color: var(--ink); }
 .shell {
-  max-width: 720px;
+  max-width: 40rem;
   margin: 0 auto;
-  padding: 0 1.1rem 5.5rem;
+  padding: 0 1.25rem 5.5rem;
 }
 .site-header {
   position: sticky;
   top: 0;
   z-index: 20;
+  width: 100%;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line-subtle);
+}
+.site-header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  max-width: 720px;
+  max-width: 40rem;
   margin: 0 auto;
-  padding: 0.9rem 1.1rem;
-  background: color-mix(in srgb, var(--bg) 90%, transparent);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
+  padding: 0.75rem 1.25rem;
 }
 .site-header .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font-family: "Shippori Mincho", serif;
   font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.05em;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
   text-decoration: none;
   color: var(--ink);
+}
+.brand-mark {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
+  color: var(--accent);
 }
 .site-header nav {
   display: flex;
@@ -104,22 +110,28 @@ a { color: var(--ink); }
   border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line));
 }
 .back-to-index a:hover { border-color: var(--accent); }
+.hero-bleed {
+  margin: 0;
+  width: 100%;
+  height: clamp(14rem, 46vw, 22rem);
+  overflow: hidden;
+  background: var(--photo-bg);
+}
+.hero-bleed img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+  display: block;
+}
+.hero-bleed.is-portrait img { object-position: 52% 58%; }
+.hero-bleed.is-lanterns img { object-position: 50% 18%; }
+.hero-bleed.is-counter img { object-position: 40% 55%; }
+.hero-bleed.is-post img { object-position: 28% 42%; }
 .hero {
   position: relative;
-  padding: 1.5rem 0 0.5rem;
+  padding: 1.35rem 0 0.35rem;
   animation: lamp-in 0.8s ease both;
-}
-.hero::before {
-  content: "";
-  display: block;
-  height: clamp(8rem, 30vw, 11.5rem);
-  margin: 0 0 1.2rem;
-  border-radius: 4px;
-  background:
-    linear-gradient(180deg, rgba(163,111,38,0.14), rgba(246,239,228,0.85)),
-    var(--hero-scene) center / cover no-repeat;
-  border: 1px solid var(--line-subtle);
-  box-shadow: 0 2px 10px rgba(42, 36, 48, 0.05);
 }
 .eyebrow-label {
   display: inline-block;
@@ -140,11 +152,13 @@ a { color: var(--ink); }
   margin: 0 0 0.75rem;
   color: var(--ink);
 }
-.hero h1.is-brand {
+.hero h1.is-brand,
+.hero h1.is-display {
   font-family: "Shippori Mincho", serif;
   font-weight: 700;
-  font-size: clamp(1.65rem, 5.5vw, 2.2rem);
+  font-size: clamp(1.75rem, 5.8vw, 2.35rem);
   letter-spacing: 0.04em;
+  line-height: 1.35;
 }
 .hero .hook {
   margin: 0;
@@ -162,22 +176,24 @@ a { color: var(--ink); }
   animation-delay: 0.08s;
 }
 .feature-intro {
-  margin: 0 0 1.5rem;
-  padding: 1.15rem 1.2rem 1.25rem;
-  background: color-mix(in srgb, var(--memo) 60%, var(--paper));
-  border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--line));
-  border-left: 4px solid var(--accent);
-  border-radius: 4px;
+  margin: 0 0 1.6rem;
+  padding: 0.15rem 0 1.35rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
   color: var(--ink);
-  font-size: 0.95rem;
-  box-shadow: 0 2px 8px rgba(42, 36, 48, 0.03);
+  font-size: 0.97rem;
+  box-shadow: none;
   animation: lamp-in 1s ease both;
   animation-delay: 0.08s;
 }
 .feature-intro h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem;
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.55rem;
   color: var(--ink);
 }
 .feature-intro h2 + p,
@@ -215,9 +231,15 @@ a { color: var(--ink); }
   padding: 0.2rem 0 1.2rem;
   border-bottom: 1px solid var(--line);
 }
-.howto h2 {
-  font-size: 1.1rem;
-  font-weight: 600;
+.howto h2,
+.stance h2,
+.criteria h2,
+.compare h2,
+.panel h2 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   margin: 0 0 0.55rem;
 }
 .howto ol {
@@ -233,8 +255,6 @@ a { color: var(--ink); }
   border-bottom: 1px solid var(--line);
 }
 .stance h2 {
-  font-size: 1.1rem;
-  font-weight: 600;
   margin: 0 0 0.55rem;
 }
 .stance p {
@@ -250,8 +270,6 @@ a { color: var(--ink); }
   border-bottom: 1px solid var(--line);
 }
 .criteria h2 {
-  font-size: 1.1rem;
-  font-weight: 600;
   margin: 0 0 0.6rem;
 }
 .criteria ol {
@@ -325,20 +343,20 @@ a { color: var(--ink); }
 
 .hero-strip {
   display: grid;
-  grid-template-columns: 88px 1fr;
-  gap: 0.9rem;
+  grid-template-columns: 96px 1fr;
+  gap: 1rem;
   align-items: start;
-  margin: 0 0 1.4rem;
-  padding: 0.85rem 0.2rem 1.1rem;
+  margin: 0 0 1.5rem;
+  padding: 0.35rem 0 1.2rem;
   border-bottom: 1px solid var(--line);
 }
 .hero-strip-thumb {
   display: block;
-  width: 88px;
-  height: 88px;
+  width: 96px;
+  height: 96px;
   overflow: hidden;
   background: var(--photo-bg);
-  border-radius: 4px;
+  border-radius: 2px;
   border: 1px solid var(--line-subtle);
   text-decoration: none;
 }
@@ -397,8 +415,6 @@ a { color: var(--ink); }
   border-bottom: 1px solid var(--line);
 }
 .compare h2 {
-  font-size: 1.12rem;
-  font-weight: 600;
   margin: 0 0 0.4rem;
 }
 .compare .sub { margin: 0 0 0.85rem; color: var(--muted); font-size: 0.9rem; }
@@ -446,20 +462,19 @@ a { color: var(--ink); }
 .card {
   position: relative;
   display: grid;
-  grid-template-columns: 6px 1fr;
-  margin: 0 0 1.35rem;
+  grid-template-columns: 8px 1fr;
+  margin: 0 0 1.5rem;
   background: var(--paper);
-  border: 1px solid color-mix(in srgb, var(--accent) 16%, var(--line));
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(42, 36, 48, 0.04);
+  border: 1px solid var(--line-subtle);
+  border-radius: 2px;
+  box-shadow: none;
   scroll-margin-top: 5.5rem;
   overflow: hidden;
 }
 .card.is-highlight {
-  border-color: var(--accent);
-  box-shadow: 0 3px 12px rgba(163, 111, 38, 0.12);
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
 }
-.card-rail { background: var(--ink); opacity: 0.25; }
+.card-rail { background: var(--ink); opacity: 0.18; }
 .type-kunshu .card-rail { background: var(--kunshu); opacity: 1; }
 .type-soushu .card-rail { background: var(--soushu); opacity: 1; }
 .type-junshu .card-rail { background: var(--junshu); opacity: 1; }
@@ -476,6 +491,20 @@ a { color: var(--ink); }
   border-radius: 3px;
   padding: 0.12rem 0.5rem;
 }
+.type-badge,
+.chip {
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 0.12rem 0.5rem;
+}
+.type-kunshu .type-badge { color: #8a4a3e; border-color: color-mix(in srgb, var(--kunshu) 55%, var(--line)); }
+.type-soushu .type-badge { color: #3d6b5e; border-color: color-mix(in srgb, var(--soushu) 55%, var(--line)); }
+.type-junshu .type-badge { color: #6e5640; border-color: color-mix(in srgb, var(--junshu) 55%, var(--line)); }
+.type-jukushu .type-badge { color: #5a3a22; border-color: color-mix(in srgb, var(--jukushu) 55%, var(--line)); }
 .chip-flag {
   color: var(--accent);
   border-color: color-mix(in srgb, var(--accent) 50%, var(--line));
@@ -496,8 +525,9 @@ a { color: var(--ink); }
   color: var(--muted);
 }
 .card h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.28rem;
+  font-weight: 700;
   line-height: 1.4;
   margin: 0.3rem 0 0.3rem;
   color: var(--ink);
@@ -505,14 +535,14 @@ a { color: var(--ink); }
 .card-meta { margin: 0 0 0.75rem; color: var(--muted); font-size: 0.88rem; }
 .card-photo,
 .hero-photo {
-  margin: 0 auto 0.9rem;
+  margin: 0 auto 1rem;
   width: 100%;
-  max-width: 220px;
+  max-width: 280px;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--photo-bg);
-  border: 1px solid var(--line);
-  border-radius: 4px;
+  border: 1px solid var(--line-subtle);
+  border-radius: 2px;
 }
 .card-photo img,
 .hero-photo img {
@@ -521,21 +551,21 @@ a { color: var(--ink); }
   object-fit: contain;
   object-position: center;
   display: block;
-  padding: 0.7rem;
+  padding: 0.35rem;
   box-sizing: border-box;
   background: var(--photo-bg);
 }
 
 .feature-row {
   display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 0.9rem;
+  grid-template-columns: 96px 1fr;
+  gap: 1rem;
   align-items: center;
-  padding: 0.85rem 0.5rem;
+  padding: 1rem 0.15rem;
   border-bottom: 1px solid var(--line);
   text-decoration: none;
   color: inherit;
-  border-radius: 4px;
+  border-radius: 0;
   transition: background-color 0.15s ease;
 }
 .feature-row:hover {
@@ -545,11 +575,11 @@ a { color: var(--ink); }
 .feature-thumb,
 .offer-thumb {
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 96px;
+  height: 96px;
   overflow: hidden;
   background: var(--photo-bg);
-  border-radius: 4px;
+  border-radius: 2px;
   border: 1px solid var(--line-subtle);
   text-decoration: none;
 }
@@ -561,6 +591,12 @@ a { color: var(--ink); }
   display: block;
   background: var(--photo-bg);
 }
+.feature-thumb img {
+  object-fit: cover;
+}
+.feature-thumb.is-portrait img { object-position: 52% 58%; }
+.feature-thumb.is-lanterns img { object-position: 50% 18%; }
+.feature-thumb.is-counter img { object-position: 40% 55%; }
 .feature-thumb.is-empty,
 .offer-thumb.is-empty {
   background:
@@ -591,7 +627,7 @@ a { color: var(--ink); }
 
 .offer-row {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 96px 1fr;
   gap: 0.85rem;
   align-items: start;
   margin: 0.9rem 0;
@@ -617,7 +653,7 @@ a { color: var(--ink); }
 }
 .offer-sales-head {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 96px 1fr;
   gap: 0.85rem;
   align-items: start;
   margin-bottom: 0.85rem;
@@ -741,12 +777,12 @@ a { color: var(--ink); }
 }
 
 .memo {
-  background: var(--memo);
-  padding: 0.85rem 0.95rem;
+  background: color-mix(in srgb, var(--memo) 70%, var(--paper));
+  padding: 0.85rem 0 0.85rem 0.95rem;
   margin: 0 0 0.95rem;
-  border-left: 4px solid var(--accent);
-  border-radius: 0 4px 4px 0;
-  box-shadow: 0 1px 4px rgba(42, 36, 48, 0.04);
+  border-left: 3px solid var(--accent);
+  border-radius: 0;
+  box-shadow: none;
 }
 .memo-label {
   margin: 0 0 0.3rem;
@@ -812,7 +848,6 @@ a { color: var(--ink); }
 .btn-primary {
   background: var(--accent);
   color: #ffffff;
-  box-shadow: 0 2px 6px rgba(163, 111, 38, 0.25);
 }
 .btn-primary:hover { background: var(--accent-press); }
 .btn-ghost {
@@ -829,8 +864,6 @@ a { color: var(--ink); }
   animation: lamp-in 0.85s ease both;
 }
 .panel h2 {
-  font-size: 1.15rem;
-  font-weight: 600;
   margin: 0 0 0.45rem;
 }
 .panel .sub { margin: 0 0 0.9rem; color: var(--muted); font-size: 0.92rem; }
@@ -886,5 +919,6 @@ a { color: var(--ink); }
   *, *::before { animation: none !important; }
 }
 @media (min-width: 900px) {
+  .hero-bleed { height: 24rem; }
   .sticky-cta { display: none !important; }
 }

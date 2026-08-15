@@ -13,34 +13,39 @@
   <meta property="og:url" content="https://sarima-gh.github.io/sakebukuro-landing/best.html" />
   <meta property="og:site_name" content="酒袋の日本酒ナビ" />
   
-  <meta property="og:image" content="https://sarima-gh.github.io/sakebukuro-landing/assets/bg-sake-set.jpg" />
-  <meta name="twitter:image" content="https://sarima-gh.github.io/sakebukuro-landing/assets/bg-sake-set.jpg" />
+  <meta property="og:image" content="https://sarima-gh.github.io/sakebukuro-landing/assets/scene-best.jpg" />
+  <meta name="twitter:image" content="https://sarima-gh.github.io/sakebukuro-landing/assets/scene-best.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="迷ったときの選び方" />
   <meta name="twitter:description" content="日本酒を避けてきた人と、店で飲んだ一本を家で探している人へ。場面ごとに3本だけ選んで、買える場所まで置いています。" />
 
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="./assets/site.css" />
   
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="./index.html" id="brand-home">酒袋の日本酒ナビ</a>
+  <div class="site-header-inner">
+  <a class="brand" href="./index.html" id="brand-home"><svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8.4 12 5.2 16 8.4v11.2H8V8.4z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M8 8.4h8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>酒袋の日本酒ナビ</a>
   <nav>
     <a href="./index.html" id="nav-index" data-nav="index">特集一覧</a>
     <a href="./best.html" id="nav-best" data-nav="best">迷ったとき</a>
   </nav>
+  </div>
 </header>
+<figure class="hero-bleed is-post">
+  <img src="./assets/scene-best.jpg" alt="街角の赤い郵便ポスト" width="1600" height="1067" />
+</figure>
 <div class="shell" id="main">
 
   <section class="hero">
     <span class="eyebrow-label">選び方</span>
-    <h1>迷ったときの選び方</h1>
+    <h1 class="is-display">迷ったときの選び方</h1>
     <p class="hook">特集の3本で一本に落ちないときのページ。銘柄を自分で決めず、届くものから入る。</p>
   </section>
   <div class="trust">
     <span>SSI認定日本酒ナビゲーター</span>
-    <span>広告を含みます</span>
   </div>
   <section class="concept"><p>方向が曖昧なら少量の飲み比べ。選ぶのが面倒なら、届いた1本から入る。</p></section>
   <section class="stance"><h2>味の説明について</h2><p>このサイトでは、味の説明をボクの感想でやりません。日本酒は毎年味が変わります。特に新しい造りのものはその差が大きく、何年か前に飲んだ印象を、今売っている一本の説明にすることはできないと考えています。</p><p>なので味の話は、飲んだ人のタグと、蔵元が「こう飲んでほしい」と言っている内容から書いています。ボクが書くのは、どれを選んでどれを外したか、どの場面に置くか、どこで失敗しやすいか。そこは責任を持ちます。</p></section>
@@ -95,9 +100,6 @@
 <script>
   (function(){
     var depth = location.pathname.indexOf('/p/') >= 0 ? '../' : './';
-    var root = document.documentElement;
-    root.style.setProperty('--bg-scene', "url('" + depth + "assets/bg-sake-bottle.jpg')");
-    root.style.setProperty('--hero-scene', "url('" + depth + "assets/bg-sake-set.jpg')");
     var base = "https://sarima-gh.github.io/sakebukuro-landing";
     var local = location.protocol === 'file:' || location.hostname === '127.0.0.1' || location.hostname === 'localhost';
     var indexUrl = (!local && base) ? (base + '/') : (depth + 'index.html');
