@@ -264,6 +264,31 @@ a { color: var(--ink); }
   line-height: 1.75;
 }
 .stance p:last-child { margin-bottom: 0; }
+.sakebukuro-note {
+  margin: 1.15rem 0 1.7rem;
+  padding: 1.15rem 1.2rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+}
+.sakebukuro-note h2 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.65rem;
+}
+.sakebukuro-note p {
+  margin: 0 0 0.65rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+.sakebukuro-note .note-lead {
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+.sakebukuro-note p:last-child { margin-bottom: 0; }
 .criteria {
   margin: 0 0 1.6rem;
   padding: 0.9rem 0 1.2rem;
@@ -397,17 +422,26 @@ a { color: var(--ink); }
 }
 .hero-strip-escape a:hover { color: var(--ink); }
 
+.panel.escape-best {
+  margin: 1.15rem 0 0;
+  padding: 1.15rem 1.2rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+}
+.escape-best .sub {
+  margin: 0 0 0.7rem;
+}
 .escape-row {
-  display: block;
-  margin-top: 0.35rem;
-  padding: 0.85rem 0;
+  display: inline-block;
+  margin-top: 0;
+  padding: 0.1rem 0;
   font-weight: 600;
   text-decoration: none;
-  color: var(--ink);
+  color: var(--accent);
   border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line));
 }
-.escape-row:hover { border-color: var(--accent); }
-.escape-best .sub { margin-bottom: 0.2rem; }
+.escape-row:hover { border-color: var(--accent); color: var(--ink); }
 
 .compare {
   margin: 0 0 1.6rem;
