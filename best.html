@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="日本酒を避けてきた人と、店で飲んだ一本を家で探している人へ。場面ごとに3本だけ選んで、買える場所まで置いています。" />
+  <meta name="description" content="3本でも決めきれないときのページ。方向が曖昧なら少量の飲み比べ、選ぶのが面倒ならプロが選んだ1本。" />
   <title>迷ったときの選び方</title>
   
   <link rel="canonical" href="https://sarima-gh.github.io/sakebukuro-landing/best.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="迷ったときの選び方" />
-  <meta property="og:description" content="日本酒を避けてきた人と、店で飲んだ一本を家で探している人へ。場面ごとに3本だけ選んで、買える場所まで置いています。" />
+  <meta property="og:description" content="3本でも決めきれないときのページ。方向が曖昧なら少量の飲み比べ、選ぶのが面倒ならプロが選んだ1本。" />
   <meta property="og:url" content="https://sarima-gh.github.io/sakebukuro-landing/best.html" />
   <meta property="og:site_name" content="酒袋の日本酒ナビ" />
   
@@ -18,7 +18,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="迷ったときの選び方" />
-  <meta name="twitter:description" content="日本酒を避けてきた人と、店で飲んだ一本を家で探している人へ。場面ごとに3本だけ選んで、買える場所まで置いています。" />
+  <meta name="twitter:description" content="3本でも決めきれないときのページ。方向が曖昧なら少量の飲み比べ、選ぶのが面倒ならプロが選んだ1本。" />
 
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="./assets/site.css" />
@@ -44,7 +44,11 @@
     <h1 class="is-display">迷ったときの選び方</h1>
     <p class="hook">特集の3本で一本に落ちないときのページ。銘柄を自分で決めず、届くものから入る。</p>
   </section>
-  <section class="sakebukuro-note"><h2>酒袋からの一言</h2><p class="note-lead">選んでいるのは酒袋（さけぶくろ）、SSI認定日本酒ナビゲーターです。</p><p>方向が曖昧なら少量の飲み比べ。選ぶのが面倒なら、届いた1本から入る。</p><p>このサイトでは、味の説明をボクの感想でやりません。日本酒は毎年味が変わります。特に新しい造りのものはその差が大きく、何年か前に飲んだ印象を、今売っている一本の説明にすることはできないと考えています。</p><p>なので味の話は、飲んだ人のタグと、蔵元が「こう飲んでほしい」と言っている内容から書いています。ボクが書くのは、どれを選んでどれを外したか、どの場面に置くか、どこで失敗しやすいか。そこは責任を持ちます。</p></section>
+  <section class="chooser" aria-label="先に向きを決める">
+    <h2>先に向きを決める</h2>
+<a class="chooser-row" href="#offer-sakepost">方向がまだ曖昧なら、少量のパウチで味の方向を試す。</a>
+<a class="chooser-row" href="#offer-saketaku">選ぶのが面倒なら、プロが選んだ1本が届く方へ。</a>
+  </section>
   <section class="panel" id="evergreen-bridge">
     <h2>迷ったときの定番</h2>
     <p class="sub">銘柄を自分で決められないときの、選ばなくていい選択肢。</p>
@@ -77,6 +81,8 @@
 </article>
 
   </section>
+  <p class="terms-note">料金・解約・配送の条件は、申込画面の表示を優先します。</p>
+  <details class="sakebukuro-note"><summary>酒袋からの一言</summary><p class="note-lead">選んでいるのは酒袋（さけぶくろ）、SSI認定日本酒ナビゲーターです。</p><p>方向が曖昧なら少量の飲み比べ。選ぶのが面倒なら、届いた1本から入る。</p><p>このサイトでは、味の説明をボクの感想でやりません。日本酒は毎年味が変わります。特に新しい造りのものはその差が大きく、何年か前に飲んだ印象を、今売っている一本の説明にすることはできないと考えています。</p><p>なので味の話は、飲んだ人のタグと、蔵元が「こう飲んでほしい」と言っている内容から書いています。ボクが書くのは、どれを選んでどれを外したか、どの場面に置くか、どこで失敗しやすいか。そこは責任を持ちます。</p></details>
 
   <nav class="site-nav-end" aria-label="サイト内リンク">
     <a href="./index.html" data-nav="index">特集一覧</a>
@@ -84,11 +90,127 @@
   </nav>
 <footer class="footer">
   <p>酒袋（さけぶくろ）@sakebukuro_official</p>
+  <p><a href="./about.html" data-nav="about">このサイトについて</a></p>
   <p>広告を含みます。お酒は20歳になってから。在庫・価格はリンク先の表示を優先。味覚・銘柄データに<a href="https://sakenowa.com" rel="noopener">さけのわデータ</a>を利用。</p>
 </footer>
 </div>
 
+<div class="sticky-cta" id="sticky-cta">
+  <span class="name" id="sticky-name"></span>
+  <a class="btn btn-primary" id="sticky-btn" href="#" rel="nofollow sponsored noopener" target="_blank" data-shop="rakuten">楽天で買う</a>
+</div>
 
+<script>
+(function () {
+  const sticky = document.getElementById('sticky-cta');
+  const stickyName = document.getElementById('sticky-name');
+  const stickyBtn = document.getElementById('sticky-btn');
+  const root = document.getElementById('feature-picks');
+  const cards = Array.from((root || document).querySelectorAll('.card[data-item-id]'));
+  const bridge = document.getElementById('evergreen-bridge');
+  const offers = Array.from(document.querySelectorAll('.offer-row, .offer-sales'));
+  if (!sticky || !stickyBtn) return;
+  if (!cards.length && !offers.length) return;
+
+  function setFrom(el, nameText, fallbackShop) {
+    if (!el) return;
+    const btn = el.querySelector('a.btn-primary[data-shop]');
+    stickyName.textContent = nameText || '';
+    if (btn && btn.getAttribute('href')) {
+      stickyBtn.href = btn.href;
+      stickyBtn.classList.remove('disabled');
+      stickyBtn.setAttribute('data-item-id', btn.getAttribute('data-item-id') || el.getAttribute('data-item-id') || '');
+      stickyBtn.setAttribute('data-shop', btn.getAttribute('data-shop') || fallbackShop || 'rakuten');
+      const short = btn.getAttribute('data-cta-short');
+      stickyBtn.textContent = short || btn.textContent || '楽天で買う';
+    }
+  }
+
+  function setActiveCard(card) {
+    if (!card) return;
+    const nameEl = card.querySelector('h3');
+    setFrom(card, nameEl ? nameEl.textContent : '', 'rakuten');
+  }
+
+  function setActiveOffer(offer) {
+    if (!offer) return;
+    setFrom(offer, offer.getAttribute('data-offer-name') || '', 'moshimo');
+  }
+
+  function nearest(els) {
+    const mid = window.innerHeight * 0.42;
+    let best = null;
+    let bestDist = Infinity;
+    els.forEach(function (el) {
+      const r = el.getBoundingClientRect();
+      if (r.bottom < 80 || r.top > window.innerHeight - 80) return;
+      const center = (r.top + r.bottom) / 2;
+      const dist = Math.abs(center - mid);
+      if (dist < bestDist) {
+        bestDist = dist;
+        best = el;
+      }
+    });
+    return { el: best, dist: bestDist };
+  }
+
+  function onScroll() {
+    if (window.scrollY > 80) sticky.classList.add('is-on');
+    else sticky.classList.remove('is-on');
+    const cardHit = nearest(cards);
+    const offerHit = nearest(offers);
+    const mid = window.innerHeight * 0.42;
+    const br = bridge ? bridge.getBoundingClientRect() : null;
+    const bridgeInFocus = !!(br && br.top < mid && br.bottom > 80);
+    if (bridgeInFocus && offers.length) {
+      setActiveOffer(offerHit.el || offers[0]);
+      return;
+    }
+    if (cardHit.el) setActiveCard(cardHit.el);
+    else if (offerHit.el) setActiveOffer(offerHit.el);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+
+  document.querySelectorAll('.jump a, .compare-table a, .hero-strip a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      const id = a.getAttribute('href');
+      if (!id || !id.startsWith('#')) return;
+      const el = document.querySelector(id);
+      if (!el) return;
+      el.classList.add('is-highlight');
+      setTimeout(function () { el.classList.remove('is-highlight'); }, 1200);
+    });
+  });
+
+  const params = new URLSearchParams(location.search);
+  const item = params.get('item');
+  if (item) {
+    const el = document.getElementById('item-' + item) || document.getElementById('hero-pick');
+    if (el && root && root.contains(el)) {
+      setTimeout(function () {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        el.classList.add('is-highlight');
+        setActiveCard(el);
+        sticky.classList.add('is-on');
+      }, 80);
+    } else if (cards.length) {
+      setActiveCard(cards[0]);
+      onScroll();
+    } else {
+      setActiveOffer(offers[0]);
+      onScroll();
+    }
+  } else if (cards.length) {
+    setActiveCard(cards[0]);
+    onScroll();
+  } else {
+    setActiveOffer(offers[0]);
+    onScroll();
+  }
+})();
+</script>
 <script>
   (function(){
     var depth = location.pathname.indexOf('/p/') >= 0 ? '../' : './';
@@ -96,8 +218,10 @@
     var local = location.protocol === 'file:' || location.hostname === '127.0.0.1' || location.hostname === 'localhost';
     var indexUrl = (!local && base) ? (base + '/') : (depth + 'index.html');
     var bestUrl = (!local && base) ? (base + '/best.html') : (depth + 'best.html');
+    var aboutUrl = (!local && base) ? (base + '/about.html') : (depth + 'about.html');
     document.querySelectorAll('[data-nav="index"]').forEach(function(a){ a.href = indexUrl; });
     document.querySelectorAll('[data-nav="best"]').forEach(function(a){ a.href = bestUrl; });
+    document.querySelectorAll('[data-nav="about"]').forEach(function(a){ a.href = aboutUrl; });
     var brand = document.getElementById('brand-home');
     if (brand) brand.href = indexUrl;
   })();

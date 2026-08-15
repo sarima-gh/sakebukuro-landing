@@ -42,7 +42,7 @@
   <section class="hero">
     <span class="eyebrow-label">シーンから選ぶ</span>
     <h1 class="is-brand">酒袋の日本酒ナビ</h1>
-    <p class="hook">日本酒でつまずくのは、たいてい選ぶところです。今夜の場面に近い特集をひとつ開けば、決めるのは1本で済みます。</p>
+    <p class="hook">日本酒でつまずくのは、たいてい選ぶところです。場面が決まれば、決めるのは1本で済みます。</p>
   </section>
   <p class="face">選んでいるのは酒袋（さけぶくろ）、SSI認定日本酒ナビゲーターです。味の説明はボクの感想ではなく、飲んだ人のタグと蔵元の案内から書いています。</p>
   <section class="concept"><p>特集ごとに3本だけ。方向を決めてから、手が届く入手先まで案内します。</p></section>
@@ -52,12 +52,16 @@
     <p class="sub">自分の場面に近いものから</p>
     <a class="feature-row" href="./p/20260731-amayaguchi_nyumon-a70f2809.html"><div class="feature-thumb is-counter"><img src="./assets/scene-nyumon.jpg" alt="カウンターに並んだ厚焼き玉子と酒器" loading="lazy" width="160" height="160" /></div><span><span class="feature-scene">入門</span><span class="feature-title">日本酒が苦手でも始めやすい、最初の1本</span><span class="feature-note">本命 · 風の森 秋津穂 657</span><span class="feature-audience">向く人 · 苦い・辛そうで止まっている人</span></span></a>
 <a class="feature-row" href="./p/20260815-izakaya_to_home-mise-no-ippon.html"><div class="feature-thumb is-lanterns"><img src="./assets/scene-izakaya.jpg" alt="提灯の灯る飲み屋の路地" loading="lazy" width="160" height="160" /></div><span><span class="feature-scene">店で飲んだ一本</span><span class="feature-title">店で飲んだあの一本を家で選び直す</span><span class="feature-note">本命 · 清酒 八海山</span><span class="feature-audience">向く人 · 店で飲んだ一本を家でも買いたい人</span></span></a>
-<a class="feature-row" href="./p/20260803-pairing-da15f584.html"><div class="feature-thumb"><img src="./assets/scene-pairing.jpg" alt="寿司と刺身が並ぶ食卓" loading="lazy" width="160" height="160" /></div><span><span class="feature-scene">ペアリング</span><span class="feature-title">香りと味わいで選ぶ、食事と合わせる日本酒</span><span class="feature-note">本命 · 獺祭 純米大吟醸45 1800ml</span><span class="feature-audience">向く人 · 食事の横で一本決めたい人</span></span></a>
+<a class="feature-row" href="./p/20260803-pairing-da15f584.html"><div class="feature-thumb"><img src="./assets/scene-pairing.jpg" alt="寿司と刺身が並ぶ食卓" loading="lazy" width="160" height="160" /></div><span><span class="feature-scene">ペアリング</span><span class="feature-title">香りと味わいで選ぶ、食事と合わせる日本酒</span><span class="feature-note">本命 · 獺祭 純米大吟醸45 720ml</span><span class="feature-audience">向く人 · 食事の横で一本決めたい人</span></span></a>
 <a class="feature-row" href="./p/20260805-gift-3d81e2a9.html"><div class="feature-thumb is-portrait"><img src="./assets/scene-gift.jpg" alt="クラフト紙に紐と赤い封をした贈り物" loading="lazy" width="160" height="160" /></div><span><span class="feature-scene">ギフト</span><span class="feature-title">好みが分からなくても渡しやすい日本酒ギフト</span><span class="feature-note">本命 · 黒龍 いっちょらい</span><span class="feature-audience">向く人 · 好みが分からない相手に渡す人</span></span></a>
+  </section>
+  <section class="panel guides">
+    <h2>先に読んでおく</h2>
+    <p class="sub">特集の前に、止まりやすいところだけ。</p><a class="feature-row" href="./why-bitter.html"><span><span class="feature-scene">読み物</span><span class="feature-title">日本酒が苦く感じる理由</span><span class="feature-audience">向く人 · 苦い・辛そうで止まっている人</span></span></a>
   </section>
   <section class="panel escape-best">
     <h2>3本見ても決めきれないとき</h2>
-    <p class="sub">銘柄を自分で決めなくていい選択肢を置いています。</p><a class="escape-row" href="./best.html" data-nav="best">迷ったときの選び方へ</a>
+    <p class="sub">銘柄を自分で決めなくていい。方向が曖昧なら少量の飲み比べ、選ぶのが面倒ならプロが選んだ1本。</p><a class="escape-row" href="./best.html" data-nav="best">迷ったときの選び方へ</a>
   </section>
 
   <nav class="site-nav-end" aria-label="サイト内リンク">
@@ -66,6 +70,7 @@
   </nav>
 <footer class="footer">
   <p>酒袋（さけぶくろ）@sakebukuro_official</p>
+  <p><a href="./about.html" data-nav="about">このサイトについて</a></p>
   <p>広告を含みます。お酒は20歳になってから。在庫・価格はリンク先の表示を優先。味覚・銘柄データに<a href="https://sakenowa.com" rel="noopener">さけのわデータ</a>を利用。</p>
 </footer>
 </div>
@@ -78,8 +83,10 @@
     var local = location.protocol === 'file:' || location.hostname === '127.0.0.1' || location.hostname === 'localhost';
     var indexUrl = (!local && base) ? (base + '/') : (depth + 'index.html');
     var bestUrl = (!local && base) ? (base + '/best.html') : (depth + 'best.html');
+    var aboutUrl = (!local && base) ? (base + '/about.html') : (depth + 'about.html');
     document.querySelectorAll('[data-nav="index"]').forEach(function(a){ a.href = indexUrl; });
     document.querySelectorAll('[data-nav="best"]').forEach(function(a){ a.href = bestUrl; });
+    document.querySelectorAll('[data-nav="about"]').forEach(function(a){ a.href = aboutUrl; });
     var brand = document.getElementById('brand-home');
     if (brand) brand.href = indexUrl;
   })();

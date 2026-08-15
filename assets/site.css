@@ -289,6 +289,86 @@ a { color: var(--ink); }
   font-size: 0.95rem;
 }
 .sakebukuro-note p:last-child { margin-bottom: 0; }
+.sakebukuro-note summary {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  list-style-position: outside;
+}
+.sakebukuro-note summary::-webkit-details-marker { color: var(--muted); }
+.feature-lead { margin-top: 0.75rem; }
+.hero-strip-price {
+  margin: 0.15rem 0 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.hero-strip-note {
+  margin: 0.2rem 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.offer-not-for {
+  margin: 0.45rem 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.offer-not-for .offer-fact-label {
+  display: block;
+  margin-bottom: 0.15rem;
+}
+.offer-more {
+  margin: 0.4rem 0 0;
+  font-size: 0.82rem;
+}
+.offer-more a { color: var(--muted); }
+.offer-more a:hover { color: var(--ink); }
+.bridge-self-use {
+  margin: 1.1rem 0 0.35rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+  line-height: 1.65;
+}
+.chooser { margin: 0.4rem 0 1.4rem; }
+.chooser h2 { margin: 0 0 0.65rem; }
+.chooser-row {
+  display: block;
+  margin: 0 0 0.55rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+.chooser-row:hover { border-color: var(--accent); }
+.guide-cta {
+  margin: 1.4rem 0 0;
+}
+.guide-cta a {
+  display: block;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+.guide-cta a:hover { border-color: var(--accent); }
+.terms-note {
+  margin: 0 0 1.2rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
 .criteria {
   margin: 0 0 1.6rem;
   padding: 0.9rem 0 1.2rem;
